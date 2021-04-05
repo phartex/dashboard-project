@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+html,body{
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    
+  }
+.container .main {
+    margin-top: 0;
+    height:700px;
+    overflow: hidden;
+}
+.container .left{
+    background-color: #1d9e17;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+.container .main .left img{
+    /* justify-content: center; */
+    text-align: center;
+    width: 100%;
+    margin-left:auto;
+    margin-top: 40%;
+}
+.container .main .left .para{
+    padding: 0 1em;
+    margin-top: 4em;
+}
+.right{
+    background-color: #fff;
+}
+
+.container .main button{
+    border: none;
+    background-color: #7a1594;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding: 0.7em 1.4em;
+    border-radius: 10px;
+    font-weight: 400;
+}
+.container .main .right{
+    padding: 0 40px;
+}
+.container .main .right .info{
+     margin-left: 450px;
+     margin-top: 1em;   
+}
+
+.container .main .right .info .info-link{
+    cursor: pointer;
+}
+.container .main .right .sign_portal{
+    margin-top: 45% ;
+    transform: translateY(-50%);
+}
+.container .main .right .main_right{
+    margin-top: 50px;
+}
+.container .main .right .main_right input{
+    background-color: #f0f0f0;
+    width:80%;
+    outline: none;
+    border: none;
+    height: 55px;
+}
+.container .main .right .main_password{
+    margin-top: 40px;
+}
+.container .main .right .main_password input{
+    background-color: #f0f0f0;
+    width:80%;
+    outline: none;
+    border: none;
+    height: 55px;
+}
+.container .main .right .sign_portal .terms{
+    margin-top: 50px;
+    display: flex;
+    align-items: baseline;
+}
+.container .main .right .sign_portal .terms i{
+    margin-top: 30px;
+    display: none;
+    margin-left: 60px;
+    background: red;
+    align-self: center;
+}
+.container .main .right .sign_portal .terms p{
+    margin-left: 10px;
+}
+.container .main .right .sign_portal .terms p .text-info,button{
+    cursor: pointer;
+}
+/*
+.container .main .right .main_right .input_field p{
+    background: coral;
+}
+.container .main .right .main_right .input_field input{
+    background: none;
+    border: none;
+    text-align: center;
+    margin-right: 50px;
+    outline: none;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+} */

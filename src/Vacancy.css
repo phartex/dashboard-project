@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 235, 235);
+    font-family: 'Poppins',sans-serif;
+    
+}
+nav .nav-main{
+    background-color:#1d9e17;
+    height: 70px;
+    width: 100%;
+    font-size: 1.2em;
+}
+.navbar .nav-main .collapse ul{
+margin: 0 auto;
+}
+.navbar .nav-main .collapse li a {
+color: #fff;
+margin-left: 3em;
+}
+
+section .section-right .section-app{
+    background-color: skyblue;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+}
+section .section-right .section-app .app{
+    display: flex;
+}
+section .section-right .section-app .app p{
+    margin-left: 1.5em;
+    color: white;
+}
+
+.details .details-file{
+    background-color: #fff;
+    padding: 40px;
+}
+.details .details-file2{
+    background-color: #fff;
+    margin-left: 2.5em;
+    padding: 40px;
+}
+
+.details .details-file .first button{
+    background-color: rgb(224, 214, 214);
+    outline: none;
+    color: blue;
+    border-radius: 10px;
+    margin-top: 2em;
+    border: none;
+    width: 35%;
+}
+.details .details-file .first .inner{
+    margin-left: 3em;
+   
+}
+.details .details-file .last{
+   width:80%; 
+   margin-top: 2em;
+   margin-right: 1em;
+   text-align: center;
+    display: block;
+    
+}
+
+
+
+
+.details .details-file2 .first button{
+    background-color: rgb(224, 214, 214);
+    outline: none;
+    color: blue;
+    border-radius: 10px;
+    margin-top: 2em;
+    border: none;
+    width: 35%;
+}
+.details .details-file2 .first .inner{
+    margin-left: 3em;
+   
+}
+.details .details-file2 .last{
+   width: 70%; 
+   margin-top: 2em;
+   margin-right: 1em;
+   text-align: center;
+    display: block;
+    
+}
