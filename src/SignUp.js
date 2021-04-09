@@ -10,13 +10,12 @@ const SignUp = () =>{
             <div>
             <div className="container">
         <div className="row main">
-            <div className="left col-xs-12 col-md-12 col-lg-4">
+            <div className="left container col-xs-12 col-md-12 col-lg-4">
                 <div className="para">
-                    <p>logo</p>
+                <img className='logo' src="//sidmach.com/wp-content/uploads/2020/06/Sidlogo-white-1.png" style={{backgroundColor:'black',width:"150px"}} alt=""/>
                 <p>Gain access into our world of opportunities</p>
                 </div>
                 
-                {/* <img src={graph} alt=""/> */}
                     </div>
             <div className="right col-xs-12 col-md-12 col-lg-8">
                 <p className="info">Already a member? <span className="info-link text-info">Sign in</span></p>
@@ -24,35 +23,35 @@ const SignUp = () =>{
                             <h2>Sign Up To Our Careers Portal</h2>
                 
                             <div className="row main_right">
-                                <div className="col input_field">
+                                <div className="col-xs-12  input_field">
                                     <p>Email Address</p>
                                     <input type="text"/>
                                 </div>
-                                <div className="col input_field">
+                                <div className="col-xs-12  input_field" id='field3'>
                                     <p>Username</p>
                                     <input type="text"/>
                                 </div>	
                             </div>
         
                             <div className="row main_password">
-                                <div className="col input_field">
+                                 <div className="col-xs-12 input_field">
                                     <p>Password</p>
                                     <input type="password"/>
                                 </div>
-                                <div className="col input_field">
+                                <div className="col-xs-12  input_field" id='field2'>
                                     <p>Confirm Password</p>
                                     <input type="password"/>
-                                </div>	
+                                </div>
                                 </div>
                                 
-                                <div className="terms">
+                                {/* <div className="terms">
                                     <i className="far fa-square"></i>
                                     <p>By creating an account, You agree to our <span className="text-info"> Terms 
                                     </span><br/>& <span className="text-info">Private Policy</span></p>
-                                </div>
-                                <button>
+                                </div> */}
+                                {/* <button>
                                     Create Account
-                                </button>
+                                </button> */}
                         </div>
             </div>
         </div>

@@ -7,25 +7,41 @@ body{
     font-family: 'Poppins',sans-serif;
     color: #222;
   }
-.navbar{
-    padding: .8rem;
-    background-color: green;
-}
-.navbar-nav li{
-    padding-right: 20px;
-}
-.navbar .navbar-nav .nav-item .nav-link {
-    font-size: 1.1em;
-    color: #fff
-}
+
 
 .main{
-    margin-top: 1em;
-    padding: 2rem 2rem;
+    padding: 1rem;
     height: 80vh;
+    justify-content: center;
+}
+
+.logo{
+    text-align: center;
+    
+}
+.main-row-child{
+    justify-content: center;
+}
+.main-row-child h1{
+    font-size: 3.5em;
+    text-align: center;
+    margin: auto 0;
+}
+.main-row-child .welcome{
+    text-align: center;
+    margin: 0 auto;
+    /* margin-left: 130px; */
+    width: 70%;
+}
+.main-row-child .welcome-image{
+    width: 350px;
+    margin-left: 90px;
+    align-items: center;
+    text-align: center;
 }
 .main-row .vacancy{
-       margin-top: 270px;
+       margin-top: 27px;
+       text-align: center;
 }
 .main-row .vacancy a{
     cursor: pointer;
@@ -34,8 +50,9 @@ body{
 
 form {
     background-color: #fff;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
     padding: 3em;
+    border-radius: 50px;
 }
 
 .form_group{
@@ -92,10 +109,24 @@ form .form_group .middle-footer{
   }
   @media (max-width: 576px) {
       body{
-          background-color: red;
+          
           box-shadow: none;
       }
     form {
+        margin-top: 27em;
         width: 100%;
     }
+    .main-row .vacancy{
+        text-align: center;
+        margin-top: 10px;
+ }
+ .main-row-child h1{
+     text-align: center;
+ }
+  }
+
+  @media (max-width: 576px){
+      .main-row .main-row-child{
+          height: 90px;
+      }
   }
