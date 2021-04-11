@@ -4,6 +4,9 @@ import robot from './component/robot.jpg'
 import './Vacancy.css'
 import profile1 from './component/profile-1.jpg'
 import profile2 from './component/profile-2.jpg'
+import vector1 from './component/Sidmach/Vector1.png'
+import vector from './component/Sidmach/Vector.png'
+import Ellipse from './component/Sidmach/Ellipse.png'
 
 const Vacancy = () =>{
     return (
@@ -27,10 +30,13 @@ const Vacancy = () =>{
 								<a className="nav-link text-success" href="#">Applications</a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">logo</a>
+								<a className="nav-link image-link" href="#"><img style={{width:'25px'}} src={vector1}/></a>
+							</li>
+							<li className="nav-item ">
+								<a className="nav-link image-link" href="#"><img style={{width:'25px'}} src={vector}/></a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">CM</a>
+								<a className="nav-link image-link" href="#"><img style={{width:'35px'}} src={Ellipse}/></a>
 							</li>
 							
 						</ul>
@@ -39,13 +45,13 @@ const Vacancy = () =>{
 			</div>
 		</nav>
 
-<section className="row bg-info container section-main">
+<section className="row container section-main">
 	<div className="col-xs-12 col-md-4 col-lg-4 section-left">
-		<img className='image-fluid' src={robot} style={{width:'100%'}} alt=""/>
+		{/* <img className='image-fluid' src={robot} style={{width:'100%'}} alt=""/> */}
 	</div>
 	<div className="col-xs-12 col-md-8 col-lg-8 section-right">
 		<div className = 'row personal'>
-			<div className='personal-info col-xs-12 col-md-9 col-lg-6  '>
+			{/* <div className='personal-info col-xs-12 col-md-9 col-lg-6  '>
 				<h3>Hello Chetachi</h3>
 				<p>Welcome to your dashboard</p>
 			</div>
@@ -53,10 +59,13 @@ const Vacancy = () =>{
 			<i className="envelope far fa-envelope"></i>
 			<p className="mx-4 text-center">New Application</p>
 			
-			</div>
-
+			</div> */}
+				<div className ='personal-info'>
+				<h3>Hello Chetachi</h3>
+				<p>Welcome to your dashboard</p>
+				</div>
 		</div>
-		<div className="row details">
+		{/* <div className="row details">
 			<div className="details-file col-xs-12 col-md-5 col-md-5">
 				<img src={profile1} alt=""/>
 				<h5 className="fs-1 " style={{marginTop:'10px'}}>Frontend Web Developer</h5>
@@ -85,7 +94,7 @@ const Vacancy = () =>{
 				<button type="button" className="last btn btn-primary last">APPLY NOW</button>
 
 			</div>
-		</div>
+		</div> */}
 	</div>
 
 	

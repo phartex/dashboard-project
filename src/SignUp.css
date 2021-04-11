@@ -15,16 +15,14 @@ html,body{
     /* overflow: hidden; */
 }
 .container .left{
-    background-color: green;
-    
     font-weight: 200;
-    color: #fff;
+    color: #292F53;
     font-weight: 500;
     font-size: 1.2em;
     letter-spacing: 0.1em;
 }
 .container .main .left p{
-    margin-top: 80px;
+    margin-top: 120px;
     
 }
 .container .main .left img{
@@ -32,11 +30,19 @@ html,body{
     text-align: center;
     width: 100%;
     margin-left:auto;
-    margin-top: 100px;
+    margin-top: 0px;
+}
+.container .main .left .image{
+    width:400px;
+   margin-top: 120px;
+    text-align: center;
+    margin-left: -40px;
+
 }
 .container .main .left .para{
     padding: 0 1em;
-    margin-top: 4em;
+    display: block;
+    /* margin-top: 4em; */
 }
 .container .main .left .para p{
     font-weight: 700;
@@ -47,7 +53,7 @@ html,body{
 
 .container .main button{
     border: none;
-    background-color: green;
+    background-color: #292F53;;
     color: #fff;
     /* text-align: center; */
     letter-spacing: 0.1em;
@@ -60,7 +66,7 @@ html,body{
 }
 .container .main .right .info{
      margin-left: 440px;
-     margin-top: 1em;   
+     margin-top: 0em;   
 }
 
 .container .main .right .info .info-link{
@@ -68,9 +74,12 @@ html,body{
 }
 .container .main .right .sign_portal{
     margin-top: 45% ;
-    
-    transform: translateY(-50%);
-    
+    transform: translateY(-50%); 
+}
+.container .main .right .sign_portal h2{
+    color: #292F53;
+    font-weight: 400;
+    font-size: 40px;
 }
 .container .main .right .main_right{
     margin-top: 50px;
@@ -111,6 +120,12 @@ html,body{
 }
 .container .main .right .sign_portal .terms p .text-info,button{
     cursor: pointer;
+}
+#field2{
+    width: 50%;
+}
+#field3{
+    width: 50%;
 }
 
 

@@ -15,7 +15,7 @@ nav{
     margin-top: 0;
 }
 .logo{
-    background-color: red;
+    /* background-color: red; */
     border-radius: 10px;
     margin-top: 0em;
 }
@@ -32,14 +32,16 @@ nav .nav-main{
 .navbar .nav-main .collapse ul{
 margin: 0 auto;
 }
+.navbar .nav-main .collapse ul .image-link img{
+     margin-left: 30px;
+}
 .navbar .nav-main .collapse li a {
 color: #fff;
 margin-left: 3em;
 }
 
 .section-main{
-    margin-top: 100em;
-    background-color: red;
+    margin-top: 4em;
 }
 
 .section-main .section-right{
@@ -52,12 +54,15 @@ margin-left: 3em;
     background-color: #fff;
 
     border-radius: 10px 10px 0 0;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 95%;
 }
 
 .section-main .section-right .personal .personal-info{
     padding: 1em 1em;
+}
+.section-main .section-right .personal .personal-info p{
+    letter-spacing: 1px;
+    font-weight: 200;
 }
 .section-main .section-right .personal .application{
     margin-top: 1em;
@@ -78,14 +83,17 @@ margin-left: 3em;
 
 .details .details-file{
     background-color: #fff;
-    padding: 40px;
+    padding: 30px;
+    max-height: 420px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     
 }
 .details .details-file2{
     background-color: #fff;
+    max-height: 420px;
+    overflow: hidden;
     margin-left: 2.5em;
-    padding: 40px; 
+    padding: 30px; 
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     
 }
@@ -95,9 +103,9 @@ margin-left: 3em;
     outline: none;
     color: blue;
     border-radius: 10px;
-    margin-top: 2em;
+    margin-top: 10px;
     border: none;
-    width: 35%;
+    width: 40%;
 }
 .details .details-file .first .inner{
     margin-left: 3em;
@@ -117,7 +125,7 @@ margin-left: 3em;
     outline: none;
     color: blue;
     border-radius: 10px;
-    margin-top: 2em;
+    margin-top: 10px;
     border: none;
     width: 35%;
 }
