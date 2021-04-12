@@ -49,27 +49,26 @@ body {
   text-decoration: underline;
 }
 
-form {
-  background-color: #fff;
-  /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); */
+.sign-in-form {
   padding: 3em;
   border-radius: 5px;
   margin-top: -2rem;
   margin-left: 2rem;
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
-form img {
-  color: #000 !important;
-  background-color: #076032;
-  margin-left: 5rem;
+.sign-in-form img {
+  margin-left: 8rem;
   margin-bottom: 2rem;
+  width: 150px;
 }
 
 .form-header {
   text-align: center;
 }
 
-form:hover {
+.sign-in-form:hover {
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   padding: 3em;
@@ -127,6 +126,60 @@ form .form_group .middle-footer {
   cursor: pointer;
   margin-left: 30px;
   margin-bottom: 1.2rem;
+}
+
+.new-app-header {
+  padding: 2rem;
+}
+
+.new-app-header h1 {
+  color: #292f53;
+  font-size: 50px;
+}
+
+.new-app-header p {
+  font-size: 20px;
+}
+
+.new-app-img img {
+  width: 250px;
+}
+
+.new-app-form {
+  width: 100%;
+}
+
+.new-app-form-field {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1.3px solid #453174;
+}
+
+.new-app-btn {
+  justify-content: center;
+}
+
+.new-app-btn button {
+  background-color: #076032 !important;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: none !important;
+  width: 25%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.long-field {
+  width: 88% !important;
+  margin-left: 1.7rem;
+}
+.short-field {
+  width: 80% !important;
+}
+
+.align-end {
+  text-align: end;
 }
 @media (max-width: 576px) {
   body {

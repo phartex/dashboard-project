@@ -17,8 +17,8 @@ const Portal = () => {
       <div className="container main">
         <div className="row main-row">
           <div className=" col-xs-12 col-md-6 col-lg-6">
-            <h1>Join Our Team At</h1>
-            <h1 className="text-success">Sidmach</h1>
+            <h1>Join Our Team </h1>
+            <h1 className="text-success"> At Sidmach</h1>
           </div>
         </div>
         <Row>
@@ -39,8 +39,8 @@ const Portal = () => {
           </Col>
 
           <Col>
-            <form>
-              <img src="img/sidmach-logo.png" alt="" />
+            <form className="sign-in-form">
+              <img src="img/sidmach-logo2.png" alt="" />
               <div className="form-header">
                 <p className="welcome">WELCOME BACK ! LOGIN HERE</p>
               </div>
