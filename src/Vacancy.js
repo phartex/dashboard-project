@@ -7,7 +7,10 @@ import profile2 from './component/profile-2.jpg'
 import vector1 from './component/Sidmach/Vector1.png'
 import vector from './component/Sidmach/Vector.png'
 import Ellipse from './component/Sidmach/Ellipse.png'
-
+import chart from './component/Sidmach/chart.png'
+import rectangle from './component/Sidmach/rectangle.png'
+import greenrec from './component/Sidmach/greenrec.png'
+import mockups from './component/Sidmach/mockups.png'
 const Vacancy = () =>{
     return (
         <body>
@@ -45,56 +48,84 @@ const Vacancy = () =>{
 			</div>
 		</nav>
 
-<section className="row container section-main">
-	<div className="col-xs-12 col-md-4 col-lg-4 section-left">
-		{/* <img className='image-fluid' src={robot} style={{width:'100%'}} alt=""/> */}
+<section className="row container-fluid section-main">
+	<div className="col-xs-12 col-md-8 col-lg-8 section-left">
+			<div className="left_upper">
+			<h2>Hello Chetachi</h2>
+				<p>Welcome to your dashboard</p>
+			</div>
+			<div className = "left_middle">
+				<div className="row application">
+					<div className="col-lg-8">
+						<h3 >Applications Overview</h3>
+						<div className="test">
+							<img  src ={greenrec} width='25px'/>
+							<p>0 Succesful applicants</p>
+						</div>
+						<div  className="test" >
+							<img  src ={rectangle} width='25px'/>
+							<p>Applications response rate</p>
+						</div>
+						
+					</div>
+					<div className="col-lg-4">
+					<img src ={chart} style={{marginLeft:"-100px",marginTop:'2em'}} width='300px'/>
+					</div>
+				</div>
+			</div>
+			<div className="left_low">
+				<h3 style={{marginTop:'30px'}}>Available positions</h3>
+				<br/>
+				<div className="grid">
+				<div className='first'>
+				<h5 className="fs-1 " style={{marginTop: '10px'}}>Frontend Web Developer</h5>
+					<p className="text-muted">The Web developer translates brands objectives into code and is 
+					in charge of delivering a compelling experience for all web  visitors.</p>
+					<div className="button"><button type="button" className="mid_level btn btn-primary">Mid-Level</button>
+					<button type="button" className="inner btn btn-primary">1-year</button>
+					</div>
+					<button type="button" className="last btn btn-primary last">APPLY NOW</button>
+				</div>
+
+				<div className='second'>
+				<h5 className="fs-1 " style={{marginTop: '10px'}}>Frontend Web Developer</h5>
+					<p className="text-muted">The Web developer translates brands objectives into code and is 
+					in charge of delivering a compelling experience for all web  visitors.</p>
+					<div className="button"><button type="button" className="mid_level btn btn-primary">Mid-Level</button>
+					<button type="button" className="inner btn btn-primary">1-year</button>
+					</div>
+					<button type="button" className="last btn btn-primary last">APPLY NOW</button>
+				</div>
+				<div className='third'>
+				<h5 className="fs-1 " style={{marginTop: '10px'}}>Frontend Web Developer</h5>
+					<p className="text-muted">The Web developer translates brands objectives into code and is 
+					in charge of delivering a compelling experience for all web  visitors.</p>
+					<div className="button"><button type="button" className="mid_level btn btn-primary">Mid-Level</button>
+					<button type="button" className="inner btn btn-primary">1-year</button>
+					</div>
+					<button type="button" className="last btn btn-primary last">APPLY NOW</button>
+				</div>
+				</div>
+				
+				
+				
+
+
+
+
+
+	
+
+			</div>
+						
 	</div>
-	<div className="col-xs-12 col-md-8 col-lg-8 section-right">
+	<div className="col-xs-12 col-md-4 col-lg-4 section-right">
 		<div className = 'row personal'>
-			{/* <div className='personal-info col-xs-12 col-md-9 col-lg-6  '>
-				<h3>Hello Chetachi</h3>
-				<p>Welcome to your dashboard</p>
-			</div>
-			<div className='application' col-lg-6>
-			<i className="envelope far fa-envelope"></i>
-			<p className="mx-4 text-center">New Application</p>
-			
-			</div> */}
-				<div className ='personal-info'>
-				<h3>Hello Chetachi</h3>
-				<p>Welcome to your dashboard</p>
-				</div>
+			<img src={mockups} width='300px'/>
+			<h2>Exciting Content From Sidmach gbish</h2>
+			<button type="button" style={{fontWeight:'600'}} className="last btn btn-primary last">VISIT OUR BLOG</button>
+
 		</div>
-		{/* <div className="row details">
-			<div className="details-file col-xs-12 col-md-5 col-md-5">
-				<img src={profile1} alt=""/>
-				<h5 className="fs-1 " style={{marginTop:'10px'}}>Frontend Web Developer</h5>
-				<p className = 'text-muted'>The Web developer translates brands objectives into code and is in chrage of delivering
-					a compelling experience for all web  visitors.
-				</p>
-				<div className="button first">
-					<button type="button" className="btn btn-primary">Mid-Level</button>
-					<button type="button" className="inner btn btn-primary">1-year</button>
-				</div>
-
-				<button type="button" className="last btn btn-primary last">APPLY NOW</button>
-
-			</div>
-			<div className="details-file2 col-xs-12 col-md-5 col-md-5">
-				<img src={profile2} alt="another"/>
-				<h5 className="" style={{marginTop:'10px'}}>Frontend Web Developer</h5>
-				<p className = 'text-muted'>The Web developer translates brands objectives into code and is in chrage of delivering
-					a compelling experience for all web  visitors.
-				</p>
-				<div className="button first">
-					<button type="button" className="btn btn-primary">Mid-Level</button>
-					<button type="button" className="inner btn btn-primary">1-year</button>
-				</div>
-
-				<button type="button" className="last btn btn-primary last">APPLY NOW</button>
-
-			</div>
-		</div> */}
 	</div>
 
 	
