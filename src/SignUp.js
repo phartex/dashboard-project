@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, BrowserRouter } from "react-router-dom";
 // import graph from './graph.png'
+import { Navbar, Nav } from "react-bootstrap";
 import "./SignUp.css";
 import image from "./component/signup-image.png";
 
@@ -8,21 +9,15 @@ const SignUp = () => {
   return (
     <body>
       <div>
-        <div className="container">
-          <div className="row main">
-            <div className="left container col-xs-12 col-md-12 col-lg-4">
-              <div className="para">
-                <img
-                  className="logo"
-                  src="//sidmach.com/wp-content/uploads/2020/06/Sidlogo-white-1.png"
-                  style={{ backgroundColor: "green", width: "150px" }}
-                  alt=""
-                />
-              </div>
-              <img className="image" src={image} />
-              <p>Gain access into our world of opportunities</p>
-            </div>
-            <div className="right col-xs-12 col-md-12 col-lg-8">
+        <Navbar className="nav-bar" color="light" expand="md">
+          <Navbar.Brand>
+            {" "}
+            <img src="img/sidmach-logo2.png" alt="" />{" "}
+          </Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav className="nav-items">
+              {" "}
               <p className="info">
                 Return to{" "}
                 <span className="info-link text-info">
@@ -31,6 +26,16 @@ const SignUp = () => {
                 </span>{" "}
                 website
               </p>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <div className="container">
+          <div className="row main">
+            <div className="left container col-xs-12 col-md-12 col-lg-4">
+              <img className="image" src={image} />
+              <p>Gain access into our world of opportunities</p>
+            </div>
+            <div className="right col-xs-12 col-md-12 col-lg-8">
               <div className="sign_portal">
                 <h2>Sign Up To Our Careers Portal</h2>
 

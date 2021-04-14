@@ -4,6 +4,7 @@ import "./Dash.css";
 import Vacancy from "./Vacancy";
 import Portal from "./Portal";
 import NewApplication from "./component/pages/NewApplication";
+import Header from "./component/layout/Header";
 import {
   BrowserHistory,
   BrowserRouter,

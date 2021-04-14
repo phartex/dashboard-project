@@ -5,6 +5,15 @@ body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   color: #222;
+  background-color: #fafafa;
+}
+
+.landing-body {
+  background-image: url("../src/bg-img/Vector.png"),
+    url("../src/bg-img/Vector2.png");
+  background-position: bottom left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 180px, 550px;
 }
 
 .main {
@@ -13,8 +22,43 @@ body {
   justify-content: center;
 }
 
+.img-section {
+  margin-bottom: 2rem;
+}
+
+.center-text {
+  text-align: center;
+  justify-content: center;
+}
+
+.main-text h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .bg-img {
   width: 97%;
+}
+
+.nav-bar {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.nav-bar img {
+  width: 200px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .logo {
@@ -40,6 +84,9 @@ body {
   align-items: center;
   text-align: center;
 }
+.vacancy {
+  margin-bottom: 2rem;
+}
 .main-row .vacancy {
   margin-top: 27px;
   text-align: center;
@@ -50,10 +97,12 @@ body {
 }
 
 .sign-in-form {
-  padding: 3em;
-  border-radius: 5px;
-  margin-top: -2rem;
-  margin-left: 2rem;
+  padding: 2em;
+  width: 70%;
+  height: 80%;
+  border-radius: 20px;
+  margin-top: 2rem;
+  margin-left: 10rem;
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
@@ -66,13 +115,6 @@ body {
 
 .form-header {
   text-align: center;
-}
-
-.sign-in-form:hover {
-  background-color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  padding: 3em;
-  border-radius: 5;
 }
 
 .form_group {
@@ -181,6 +223,158 @@ form .form_group .middle-footer {
 .align-end {
   text-align: end;
 }
+
+.dash-header h1 {
+  font-weight: 400;
+}
+
+.dash-header p {
+  font-weight: 100;
+  color: #999999;
+}
+
+.app-ov-card {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.app-ov-card img {
+  width: 300px;
+}
+.card2 img {
+  width: 280px !important;
+  height: 220px;
+  margin-bottom: 2rem;
+}
+
+.cards-header {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.stats-info img {
+  width: 20px;
+  margin-right: 1rem;
+}
+
+.card2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.card2 h2 {
+  color: #453074;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.card2 button,
+.blue-btn {
+  background-color: #292f53;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-left: 5rem;
+  border: none;
+}
+
+.blue-btn {
+  margin-left: 0 !important;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 8px;
+  width: 100%;
+  border-radius: 6px;
+}
+.btn-lg {
+  font-size: 15px !important;
+  padding: 1rem !important;
+  margin-bottom: 2rem;
+}
+
+.positions-cards {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.positions-cards img {
+  width: 30px;
+  height: 30px;
+}
+
+.positions-cards h3 {
+  font-size: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.positions-cards p {
+  font-size: 12px;
+  font-weight: 100;
+  color: #686666;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.job-tag {
+  font-size: 8px;
+  padding: 0.3rem;
+  background-color: #d8d4d4;
+  border-radius: 5px;
+}
+
+.luminate-vid {
+  background: url("../src/bg-img/Subtract.png");
+  width: 100px !important;
+}
+.luminate-vid img {
+  width: 370px;
+}
+
+.luminate-logo {
+  margin-top: -5.2rem;
+}
+
+.luminate-logo img {
+  width: 370px;
+}
+
+.overview-info {
+  display: inline-flex;
+}
+.overview-info input {
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+.warning-info {
+  margin-left: 4rem;
+}
+
+.warning-info p {
+  color: #c30202;
+}
+
+._53Ji7 {
+  padding: 2rem;
+  width: 100% !important;
+}
+
+._2_g61 {
+  padding: 1rem;
+  margin-top: 5rem !important;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 95% !important;
+  }
+}
 @media (max-width: 576px) {
   body {
     box-shadow: none;
@@ -197,6 +391,11 @@ form .form_group .middle-footer {
     text-align: center;
   }
 }
+/* @media (width: 1400px) {
+  .bg-img {
+    width: 85%;
+  }
+} */
 
 @media (max-width: 576px) {
   .main-row .main-row-child {

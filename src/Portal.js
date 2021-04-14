@@ -13,24 +13,28 @@ import SignUp from "./SignUp";
 import welcome from "./component/welcome.jpg";
 const Portal = () => {
   return (
-    <body>
+    <body className="landing-body">
       <div className="container main">
-        <div className="row main-row">
-          <div className=" col-xs-12 col-md-6 col-lg-6">
-            <h1>Join Our Team </h1>
-            <h1 className="text-success"> At Sidmach</h1>
-          </div>
-        </div>
         <Row>
-          <Col>
+          <Col className="img-section">
             <img
               className="logo bg-img"
-              src="img/bg1.png"
+              src="img/bg-img2.png"
               style={{ backgroundColor: "transparent" }}
               alt=""
             />
 
-            <p className="vacancy">
+            <div className="row main-row  main-text center-text">
+              <div className=" col-xs-12 col-md-6 col-lg-6">
+                <h1>Join Our Team </h1>
+                <h1>
+                  {" "}
+                  at <span className="text-success">SIDMACH</span>{" "}
+                </h1>
+              </div>
+            </div>
+
+            <p className="vacancy center-text">
               Discover available vacancies{" "}
               <Link to="/Vacancy" className="text-info">
                 Click Here For More
@@ -50,7 +54,7 @@ const Portal = () => {
                   type="text"
                   id="name"
                   name="username"
-                  placeholder="Username (minimum 7 characters)"
+                  placeholder="Username"
                   className="form_input"
                   required
                   minlength=" 7"
@@ -68,6 +72,7 @@ const Portal = () => {
                   id="confirm_password"
                   class="form_input"
                 />
+
                 <div className="middle-footer row">
                   <p className="col-xs-12">
                     Don't have an account?{" "}
