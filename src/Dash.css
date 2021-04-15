@@ -271,7 +271,7 @@ form .form_group .middle-footer {
 }
 
 .app-ov-card {
-  /* padding: 2rem; */
+  padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -280,7 +280,10 @@ form .form_group .middle-footer {
   width: 300px;
 }
 .skills {
-  margin: 3em auto;
+  margin-left: -30px;
+}
+.card2 {
+  padding: 0;
 }
 .card2 img {
   height: 120px;
@@ -299,12 +302,11 @@ form .form_group .middle-footer {
 }
 
 .card2 {
-  text-align: center;
   display: flex;
-  align-items: center;
 }
 
-.card2 h2 {
+.card2 h2,
+.skills h2 {
   color: #453074;
   font-weight: 700;
   margin-bottom: 2rem;
