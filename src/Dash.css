@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 body {
   width: 100%;
   height: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   color: #222;
   background-color: #fafafa;
+}
+
+.container {
+  height: 100% !important;
 }
 
 .landing-body {
@@ -14,15 +19,17 @@ body {
   background-position: bottom left, bottom right;
   background-repeat: no-repeat, no-repeat;
   background-size: 180px, 550px;
+  overflow: hidden;
 }
 
 .main {
   padding-top: 4rem;
-  height: 80vh;
+  height: 100vh;
   justify-content: center;
 }
 
 .img-section {
+  margin-top: -2rem;
   margin-bottom: 2rem;
 }
 
@@ -30,10 +37,22 @@ body {
   text-align: center;
   justify-content: center;
 }
+.left-text {
+  text-align: left !important;
+  justify-content: center;
+}
+.main-text {
+  width: 120%;
+}
+.text-sidmach {
+  color: #292f53;
+}
 
 .main-text h1 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3.1rem;
+  margin-top: -1rem;
+  line-height: 4rem;
 }
 
 .bg-img {
@@ -86,13 +105,16 @@ body {
 }
 .vacancy {
   margin-bottom: 2rem;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
 }
-.main-row .vacancy {
+.main-row {
   margin-top: 27px;
   text-align: center;
 }
 .main-row .vacancy a {
   cursor: pointer;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -108,7 +130,7 @@ body {
 }
 
 .sign-in-form img {
-  margin-left: 8rem;
+  margin-left: 6.5rem;
   margin-bottom: 2rem;
   width: 150px;
 }
@@ -149,22 +171,26 @@ form .form_group .middle-footer {
   justify-content: left;
   margin-top: 5em;
 }
+.form-control {
+  font-size: 0.7rem !important;
+}
 
 .middle-footer p {
   border-bottom: 1px solid #999999;
 }
 .middle-footer p a {
   cursor: pointer;
+  color: #000;
 }
 
 .form_submit {
-  background-color: green;
+  background-color: #292f53;
   outline: none;
   border: none;
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem 2rem;
-  border-radius: 1.2rem;
+  border-radius: 12px;
   cursor: pointer;
   margin-left: 30px;
   margin-bottom: 1.2rem;
@@ -180,7 +206,9 @@ form .form_group .middle-footer {
 }
 
 .new-app-header p {
-  font-size: 20px;
+  font-size: 16px;
+  width: 65%;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .new-app-img img {
@@ -194,7 +222,16 @@ form .form_group .middle-footer {
 .new-app-form-field {
   margin: 1rem;
   padding: 1rem;
-  border: 1.3px solid #453174;
+  border: none;
+  background-color: #eeeeee;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #eeeeee !important;
+  outline: 0;
+  box-shadow: none !important;
 }
 
 .new-app-btn {
@@ -368,6 +405,36 @@ form .form_group .middle-footer {
 ._2_g61 {
   padding: 1rem;
   margin-top: 5rem !important;
+}
+
+._2Jtxm._35Ago ._2kL0S {
+  background-color: #292f53 !important;
+  color: white;
+  animation: _JAh3L 400ms ease forwards;
+}
+
+._2Jtxm._2ZUAI ._2JvrO {
+  background-color: #076032 !important;
+  color: white;
+  animation: _3SDnc 400ms ease-in-out forwards;
+}
+
+._hsN1w {
+  background-color: #292f53 !important;
+  border: none !important;
+  color: white !important;
+}
+
+._3uApM {
+  justify-content: center !important;
+}
+
+.form-card {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 1200px) {

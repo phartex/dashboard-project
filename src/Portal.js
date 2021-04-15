@@ -24,22 +24,19 @@ const Portal = () => {
               alt=""
             />
 
-            <div className="row main-row  main-text center-text">
-              <div className=" col-xs-12 col-md-6 col-lg-6">
-                <h1>Join Our Team </h1>
+            <div className="row main-row  main-text left-text">
+              <div className=" col-xs-12 col-md-6 col-lg-7">
+                <h1>Join Our team </h1>
                 <h1>
                   {" "}
-                  at <span className="text-success">SIDMACH</span>{" "}
+                  at <span className="text-sidmach">SIDMACH</span>{" "}
                 </h1>
+                <p className="vacancy ">
+                  Discover available vacancies{" "}
+                  <Link to="/Vacancy">Click Here For More</Link>
+                </p>
               </div>
             </div>
-
-            <p className="vacancy center-text">
-              Discover available vacancies{" "}
-              <Link to="/Vacancy" className="text-info">
-                Click Here For More
-              </Link>
-            </p>
           </Col>
 
           <Col>
@@ -54,7 +51,7 @@ const Portal = () => {
                   type="text"
                   id="name"
                   name="username"
-                  placeholder="Username"
+                  placeholder="Email Address"
                   className="form_input"
                   required
                   minlength=" 7"
@@ -75,10 +72,7 @@ const Portal = () => {
 
                 <div className="middle-footer row">
                   <p className="col-xs-12">
-                    Don't have an account?{" "}
-                    <Link to="/SignUp" className="text-info">
-                      Sign up
-                    </Link>
+                    Don't have an account? <Link to="/SignUp">Sign up</Link>
                   </p>
                   <button className="col-xs-12 form_submit">LOGIN</button>
                 </div>
