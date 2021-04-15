@@ -14,9 +14,6 @@ import rectangle from "./component/Sidmach/rectangle.png";
 import greenrec from "./component/Sidmach/greenrec.png";
 import mockups from "./component/Sidmach/mockups.png";
 const Vacancy = () => {
-  clickImg =()=>{
-    console.log('iiiiiiii')
-  }
    
   return (
     <div>
@@ -215,7 +212,7 @@ const Vacancy = () => {
             
 
             <div className="luminate-vid">
-              <a onClick={clickImg()}><img src="img/luminate-vid.png" alt="" /></a>
+            <img src="img/luminate-vid.png" alt="" />
             </div>
 
             <div className="luminate-logo">
