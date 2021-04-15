@@ -12,7 +12,14 @@ body{
     font-family: 'Poppins',sans-serif;
     
 }
-
+.apply{
+    display: flex;
+}
+.apply img{
+    background-color: red;
+    width: 2%;
+    float: left;
+}
 .align-center img{
     width: 30px;
 }
@@ -23,7 +30,7 @@ body{
 .test {
     margin-top: 20px;
     display: grid;
-   grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 .test p{
     margin-left: -180px;

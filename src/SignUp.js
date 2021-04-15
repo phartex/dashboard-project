@@ -31,19 +31,20 @@ const SignUp = () => {
         </Navbar>
         <div className="container">
           <div className="row main">
-            <div className="left container col-xs-12 col-md-12 col-lg-4">
+            <div className="left container col">
               <img className="image" src={image} />
               <p>Gain access into our world of opportunities</p>
             </div>
-            <div className="right col-xs-12 col-md-12 col-lg-8">
+            <div className="right col">
+                  <h2>Sign Up To Our Careers Portal</h2>
               <div className="sign_portal">
-                <h2>Sign Up To Our Careers Portal</h2>
+                
 
                 <div className="row main_right">
-                <div className="col-xs-12 col-lg-8  input_field" id="field3">
-                    <p>Username</p>
-                    <input type="text" />
-                  </div>
+                  <div className="col-xs-12 col-lg-8  input_field" id="field3">
+                      <p>Username</p>
+                      <input type="text" />
+                    </div>
 
                   <div className="col-xs-12 col-lg-8  input_field" id="field2">
                     <p >Email Address</p>
@@ -54,10 +55,6 @@ const SignUp = () => {
                     <p>Mobile Number</p>
                     <input type="text" />
                   </div>
-
-                </div>
-
-                <div className="row main_password">
                   <div className="col-xs-12 col-lg-8 input_field" id="field3">
                     <p>Password</p>
                     <input type="password" placeholder="    6+characters" />

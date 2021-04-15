@@ -13,6 +13,7 @@ import chart from "./component/Sidmach/chart.png";
 import rectangle from "./component/Sidmach/rectangle.png";
 import greenrec from "./component/Sidmach/greenrec.png";
 import mockups from "./component/Sidmach/mockups.png";
+
 const Vacancy = () => {
    
   return (
@@ -79,14 +80,14 @@ const Vacancy = () => {
                   <img className='rectangle' src="img/rectangle.png" style={{width:'10px'}}  alt="" />
 
                   <h2>UI/UX Designer</h2>
-                  <Row className="align-center">
-                    {" "}
+                  <Row className="apply">
+                  {/* <img className='' src="img/save.png" style={{width:'1px'}}  alt="" /> */}
                     <button>APPLY NOW</button>
                   </Row>
                   
                 </Row>
                 <Col className='skills'>
-                    <h4>Skills Required</h4>
+                    <h2>Skills Required</h2>
                     <ul>
                       <li>Knowledgable familiarity with design tools,Figma, Adobe Xd.</li>
                       <li>Experience with design thinking methodologies, research.</li>
