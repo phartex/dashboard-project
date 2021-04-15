@@ -234,18 +234,23 @@ form .form_group .middle-footer {
 }
 
 .app-ov-card {
-  padding: 2rem;
+  /* padding: 2rem; */
   background-color: #fff;
   border-radius: 10px;
 }
 
 .app-ov-card img {
   width: 300px;
+  
+}
+.skills{
+  
+  margin: 3em auto;
 }
 .card2 img {
-  width: 280px !important;
-  height: 220px;
-  margin-bottom: 2rem;
+  height: 120px;
+  width: 100% !important;
+  margin-top: 0;
 }
 
 .cards-header {
@@ -268,15 +273,17 @@ form .form_group .middle-footer {
   color: #453074;
   font-weight: 700;
   margin-bottom: 2rem;
+  margin-top: 1em;
 }
 
 .card2 button,
 .blue-btn {
   background-color: #292f53;
+  
   color: #fff;
   padding: 1rem;
   border-radius: 10px;
-  margin-left: 5rem;
+  margin-left: 9rem;
   border: none;
 }
 

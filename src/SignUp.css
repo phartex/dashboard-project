@@ -22,7 +22,7 @@ html,body{
     letter-spacing: 0.1em;
 }
 .container .main .left p{
-    margin-top: 120px;
+    margin-top: 10px;
     
 }
 .container .main .left img{
@@ -48,7 +48,9 @@ html,body{
     font-weight: 700;
 }
 .right{
+    
     background-color: #fff;
+    width: 80%;
 }
 
 .container .main button{
@@ -80,6 +82,7 @@ html,body{
     color: #292F53;
     font-weight: 400;
     font-size: 40px;
+    
 }
 .container .main .right .main_right{
     margin-top: 50px;
@@ -123,9 +126,11 @@ html,body{
 }
 #field2{
     width: 50%;
+    margin-top: 1em;
 }
 #field3{
     width: 50%;
+    margin-top: 0;
 }
 
 
