@@ -14,6 +14,7 @@ import rectangle from "./component/Sidmach/rectangle.png";
 import greenrec from "./component/Sidmach/greenrec.png";
 import mockups from "./component/Sidmach/mockups.png";
 const Vacancy = () => {
+   
   return (
     <div>
       <Header />
@@ -75,14 +76,24 @@ const Vacancy = () => {
             <div className="app-ov-card card2">
               <Container>
                 <Row className="align-center">
-                  <img src="img/mockups.png" alt="" />
+                  <img className='rectangle' src="img/rectangle.png" style={{width:'10px'}}  alt="" />
 
-                  <h2>Exiciting Content from sidmach</h2>
+                  <h2>UI/UX Designer</h2>
                   <Row className="align-center">
                     {" "}
-                    <button>VISIT OUR BLOG</button>
+                    <button>APPLY NOW</button>
                   </Row>
+                  
                 </Row>
+                <Col className='skills'>
+                    <h4>Skills Required</h4>
+                    <ul>
+                      <li>Knowledgable familiarity with design tools,Figma, Adobe Xd.</li>
+                      <li>Experience with design thinking methodologies, research.</li>
+                      <li>Excellent verbal communication, writing , team works skills.</li>
+                    </ul>
+                </Col>
+               
               </Container>
             </div>
           </Col>
@@ -99,8 +110,8 @@ const Vacancy = () => {
                 <Row>
                   <Col>
                     <div className="positions-cards">
-                      <Row>
                         <img src="img/job-icon-1.png" alt="" />
+                      <Row>
                       </Row>
                       <Row>
                         <h3>Frontend Web Developer</h3>
@@ -198,15 +209,15 @@ const Vacancy = () => {
           </Col>
 
           <Col>
+            
+
+            <div className="luminate-vid">
+            <img src="img/luminate-vid.png" alt="" />
+            </div>
+
             <div className="luminate-logo">
               <img src="img/luminate-header.png" alt="" />
             </div>
-
-            <div className="luminate-vid">
-              <img src="img/luminate-vid.png" alt="" />
-            </div>
-
-            <button className="blue-btn btn-lg">GET LUMINATE</button>
           </Col>
         </Row>
       </Container>

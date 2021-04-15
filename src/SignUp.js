@@ -40,22 +40,29 @@ const SignUp = () => {
                 <h2>Sign Up To Our Careers Portal</h2>
 
                 <div className="row main_right">
-                  <div className="col-xs-12  input_field" id="field2">
-                    <p>Email Address</p>
-                    <input type="text" />
-                  </div>
-                  <div className="col-xs-12  input_field" id="field3">
+                <div className="col-xs-12 col-lg-8  input_field" id="field3">
                     <p>Username</p>
                     <input type="text" />
                   </div>
+
+                  <div className="col-xs-12 col-lg-8  input_field" id="field2">
+                    <p >Email Address</p>
+                    <input type="text" />
+                  </div>
+                 
+                  <div className="col-xs-12 col-lg-8  input_field" id="field2">
+                    <p>Mobile Number</p>
+                    <input type="text" />
+                  </div>
+
                 </div>
 
                 <div className="row main_password">
-                  <div className="col-xs-12 input_field" id="field2">
+                  <div className="col-xs-12 col-lg-8 input_field" id="field3">
                     <p>Password</p>
                     <input type="password" placeholder="    6+characters" />
                   </div>
-                  <div className="col-xs-12  input_field" id="field3">
+                  <div className="col-xs-12 col-lg-8  input_field" id="field2">
                     <p>Confirm Password</p>
                     <input type="password" />
                   </div>
