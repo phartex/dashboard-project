@@ -278,10 +278,8 @@ form .form_group .middle-footer {
 
 .app-ov-card img {
   width: 300px;
-  
 }
-.skills{
-  
+.skills {
   margin: 3em auto;
 }
 .card2 img {
@@ -316,7 +314,7 @@ form .form_group .middle-footer {
 .card2 button,
 .blue-btn {
   background-color: #292f53;
-  
+
   color: #fff;
   padding: 1rem;
   border-radius: 10px;
