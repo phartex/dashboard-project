@@ -30,6 +30,99 @@ const Vacancy = () => {
             <div className="app-ov-card">
               <Container>
                 <Row>
+                  <div className="cards-header">Available Positions</div>
+                </Row>
+
+                <Row>
+                  <Col>
+                    <div className="positions-cards">
+                      <img src="img/Rectangle1.png" alt="" />
+                      <div className="position-cards-inner">
+                        <Row>
+                          <h3>UI/UX Designer</h3>
+                        </Row>
+
+                        <Row>
+                          <p>
+                            The UI/UX designer delivers the best product
+                            experience for our users across all interfaces
+                            ensuring customer satisfaction and loyalty
+                          </p>
+                        </Row>
+
+                        <Row>
+                          <Col>
+                            <div className="job-tag">Mid-level</div>
+                          </Col>
+                          <Col>
+                            <button className="blue-btn">APPLY NOW</button>
+                          </Col>
+                        </Row>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col>
+                    <div className="positions-cards">
+                      <img src="img/Rectangle2.png" alt="" />
+                      <div className="position-cards-inner">
+                        <Row>
+                          <h3>Web Developer</h3>
+                        </Row>
+
+                        <Row>
+                          <p>
+                            The web developer translates brands objectives into
+                            code and is in charge of delivering a compelling
+                            experience for all web visitors
+                          </p>
+                        </Row>
+
+                        <Row>
+                          <Col>
+                            <div className="job-tag">Mid-level</div>
+                          </Col>
+                          <Col>
+                            <button className="blue-btn">APPLY NOW</button>
+                          </Col>
+                        </Row>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col>
+                    <div className="positions-cards">
+                      <img src="img/Rectangle3.png" alt="" />
+                      <div className="position-cards-inner">
+                        <Row>
+                          <h3>HR Assistant</h3>
+                        </Row>
+
+                        <Row>
+                          <p>
+                            The HR assistant supports the Human resources team
+                            in people management, talent sourcing and relevant
+                            staff onboarding processes
+                          </p>
+                        </Row>
+
+                        <Row>
+                          <Col>
+                            <div className="job-tag">Entry-level</div>
+                          </Col>
+                          <Col>
+                            <button className="blue-btn">APPLY NOW</button>
+                          </Col>
+                        </Row>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+            {/* <div className="app-ov-card">
+              <Container>
+                <Row>
                   <div className="cards-header">Applications Overview</div>
                 </Row>
                 <Row className="row-center-align">
@@ -61,7 +154,7 @@ const Vacancy = () => {
                   </Media>
                 </Row>
               </Container>
-            </div>
+            </div> */}
           </Col>
           <Col>
             <div className="luminate-vid">
@@ -72,7 +165,7 @@ const Vacancy = () => {
 
         <Row className="mt-5">
           <Col md={8}>
-            <div className="app-ov-card">
+            {/* <div className="app-ov-card">
               <Container>
                 <Row>
                   <div className="cards-header">Available Positions</div>
@@ -164,7 +257,7 @@ const Vacancy = () => {
                   </Col>
                 </Row>
               </Container>
-            </div>
+            </div> */}
           </Col>
         </Row>
       </Container>
