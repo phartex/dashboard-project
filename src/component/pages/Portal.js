@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Row, Col /*Nav*/ } from "react-bootstrap";
+import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import { link } from "react-router";
-import "./Dash.css";
+import "../../Dash.css";
 import {
   BrowserHistory,
   BrowserRouter,
@@ -10,10 +10,26 @@ import {
   Route
 } from "react-router-dom";
 import SignUp from "./SignUp";
-import welcome from "./component/welcome.jpg";
+
 const Portal = () => {
   return (
     <body className="landing-body">
+      {/* <Navbar className="nav-bar" color="light" expand="md">
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Nav className="nav-items">
+            {" "}
+            <p className="info">
+              Return to{" "}
+              <span className="info-link text-info">
+                {" "}
+                <Link to="/">main</Link>
+              </span>{" "}
+              website
+            </p>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar> */}
       <div className="container main">
         <Row>
           <Col className="img-section">
@@ -71,11 +87,13 @@ const Portal = () => {
                 />
 
                 <div className="middle-footer row">
-                  <p className="col-xs-12">
+                  <button className=" form_submit">LOGIN</button>
+                </div>
+                <Row>
+                  <p className="no-account-link">
                     Don't have an account? <Link to="/SignUp">Sign up</Link>
                   </p>
-                  <button className="col-xs-12 form_submit">LOGIN</button>
-                </div>
+                </Row>
               </div>
             </form>
           </Col>

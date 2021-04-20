@@ -2,7 +2,7 @@ import React from "react";
 import { link } from "react-router";
 import "./Dash.css";
 import Vacancy from "./Vacancy";
-import Portal from "./Portal";
+import Portal from "./component/pages/Portal";
 import NewApplication from "./component/pages/NewApplication";
 import Header from "./component/layout/Header";
 import {
@@ -12,7 +12,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import SignUp from "./SignUp";
+import SignUp from "./component/pages/SignUp";
 // import image from './image.png'
 
 const App = () => {

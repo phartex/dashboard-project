@@ -268,21 +268,16 @@ const NewApplication = () => {
     <div>
       <Header />
       <Container>
+        <Col sm={8} className="new-app-header">
+          <h1>New Application</h1>
+          <p>
+            Do you have what it takes to join our team of superstars? Submit
+            this application and we will be in touch!
+          </p>
+        </Col>
+
         <Row className="form-card">
-          <Col sm={8} className="new-app-header">
-            <h1>New Application</h1>
-            <p>
-              Do you have what it takes to join our team of superstars? Submit
-              this application and we will be in touch!
-            </p>
-          </Col>
-          <Col className="align-end">
-            <div className="new-app-img">
-              <img src="img/form-img.png" alt="" />
-            </div>
-          </Col>
-        </Row>
-        <Row className="form-card">
+          <img src="img/person1.jpeg" alt="" />
           <StepProgressBar
             startingStep={0}
             onSubmit={onFormSubmit}

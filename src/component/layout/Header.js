@@ -14,7 +14,7 @@ const Header = () => {
           <Nav className="nav-items">
             <img src="img/search.png" alt="" />
             <img src="img/bell.png" alt="" />
-            <img src="img/Ellipse.png" alt="" />
+            <img src="img/Vector2.png" alt="" />
           </Nav>
         </Navbar.Collapse>
       </Navbar>
