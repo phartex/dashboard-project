@@ -9,12 +9,12 @@ const SignUp = () => {
     document.body.style = "background: white;";
   }, []);
   return (
-    <body>
+    <body className="sign-up-body">
       <div>
         <Navbar className="nav-bar" color="light" expand="md">
           <Navbar.Brand>
             {" "}
-            <img src="img/sidmach-logo2.png" alt="" />{" "}
+            <img src="img/sidmach-logo2.png" alt="" />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
@@ -34,11 +34,11 @@ const SignUp = () => {
 
         <Container className="sign-up-bg">
           <Row>
-            <Col md={5}>
+            <Col md={7}>
               <h2 className="sign-up-header">Sign Up To Our Careers Portal</h2>
               <div className="sign-up-form">
-                <Row>
-                  <input type="text" placeholder="Username" />
+                <Row className="form-logo">
+                  <img src="img/sidmach-logo2.png" alt="" />
                 </Row>
 
                 <Row>
@@ -46,13 +46,17 @@ const SignUp = () => {
                 </Row>
 
                 <Row>
-                  <input type="text" placeholder="Username" />
+                  <input type="text" placeholder="Email Address" />
+                </Row>
+
+                <Row>
+                  <input type="text" placeholder="Mobile Number" />
                 </Row>
                 <Row>
-                  <input type="text" placeholder="Username" />
+                  <input type="text" placeholder="Password" />
                 </Row>
                 <Row>
-                  <input type="text" placeholder="Username" />
+                  <input type="text" placeholder="Confirm Password" />
                 </Row>
 
                 <div className="terms">

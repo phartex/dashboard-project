@@ -1,35 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../Dash.css";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import StepProgressBar from "react-step-progress";
 import Header from "../layout/Header";
 import "react-step-progress/dist/index.css";
-
+let file = "";
 const NewApplication = () => {
+  const [files, setFiles] = useState([]);
+
   const step1Content = (
     <Form className="new-app-form">
+      <img
+        src="img/pi1.png
+          "
+        alt=""
+      />
       <Row>
         <Col>
           <input
             type="text"
             placeholder="FULL NAME"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-        <Col>
-          <input
-            type="text"
-            placeholder="EMAIL ADDRESS"
-            className="form-control new-app-form-field short-field"
+            className="form-control new-app-form-field long-field"
           />
         </Col>
       </Row>
-
       <Row>
         <Col>
           <input
             type="text"
-            placeholder="MOBILE NUMBER"
+            placeholder="Gender"
             className="form-control new-app-form-field short-field"
           />
         </Col>
@@ -37,218 +36,183 @@ const NewApplication = () => {
         <Col>
           <input
             type="text"
-            placeholder="DATE OF BIRTH"
+            placeholder="Date of Birth"
             className="form-control new-app-form-field short-field"
           />
         </Col>
       </Row>
-
       <Row>
-        <Col></Col>
-
-        {/* <Col>
+        <Col>
           <input
             type="text"
-            placeholder="ROLE YOU ARE APPLYING FOR"
-            className="form-control new-app-form-field short-field"
+            placeholder="Home Address"
+            className="form-control new-app-form-field long-field"
           />
-        </Col> */}
+        </Col>
       </Row>
-
-      {/* <Row>
-        <Col>
-          <input
-            type="text"
-            placeholder="TERITARY INSTITUTION"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-
-        <Col>
-          <input
-            type="text"
-            placeholder="CLASS OF DEGREE (CGPA GRADE)"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-      </Row> */}
-
-      {/* <Row>
-        <Col>
-          <input
-            type="text"
-            placeholder="YEARS OF POST NYSC EXPERIENCE"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-
-        <Col>
-          <input
-            type="text"
-            placeholder="CURRENT ROLE"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-      </Row> */}
-
-      {/* <Row>
-        <Col>
-          <input
-            type="text"
-            placeholder="CURRENT EMPLOYER"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-
-        <Col>
-          <input
-            type="text"
-            placeholder="ADDITIONAL PROFESSIONAL CERTIFICATIONS"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-      </Row> */}
-
-      {/* <Row>
-        {" "}
-        <input
-          type="text"
-          placeholder="WHY SHOULD YOU BE SELECTED FOR THE ROLE"
-          className="form-control new-app-form-field long-field"
-        />
-      </Row> */}
-
-      {/* <Row>
-        <Col>
-          <input
-            type="text"
-            placeholder="RELEVANT SKILLS"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-
-        <Col>
-          <input
-            type="text"
-            placeholder="CV"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-      </Row> */}
-      {/* <Row className="new-app-btn">
-        <button className="col-xs-12">SUBMIT</button>
-      </Row> */}
     </Form>
   );
   const step2Content = (
     <Form className="new-app-form">
+      <img
+        src="img/pi2.png
+          "
+        alt=""
+      />
       <Row>
         <Col>
           <input
             type="text"
-            placeholder="YEARS OF POST NYSC EXPERIENCE"
-            className="form-control new-app-form-field short-field"
-          />
-        </Col>
-
-        <Col>
-          <input
-            type="text"
-            placeholder="CURRENT ROLE"
-            className="form-control new-app-form-field short-field"
+            placeholder="Teritary institution"
+            className="form-control new-app-form-field long-field"
           />
         </Col>
       </Row>
-
       <Row>
         <Col>
           <input
             type="text"
-            placeholder="CURRENT EMPLOYER"
+            placeholder="Class of Degree"
             className="form-control new-app-form-field short-field"
           />
         </Col>
 
         <Col>
           <input
-            type="text"
-            placeholder="ADDITIONAL PROFESSIONAL CERTIFICATIONS"
             className="form-control new-app-form-field short-field"
+            type="file"
+            name="file"
+            accept=".pdf"
+            onChange={handleChangeFile}
+            ref={input => {
+              file = input;
+            }}
+            multiple
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Special Awards/Honors"
+            className="form-control new-app-form-field long-field"
           />
         </Col>
       </Row>
     </Form>
   );
   const step3Content = (
-    <h1>
-      <Form className="new-app-form">
-        <Row>
-          <Col>
-            <input
-              type="text"
-              placeholder="RELEVANT SKILLS"
-              className="form-control new-app-form-field short-field"
-            />
-          </Col>
+    <Form className="new-app-form">
+      <img
+        src="img/pi1.png
+        "
+        alt=""
+      />
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Current Employer"
+            className="form-control new-app-form-field long-field"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Current Role"
+            className="form-control new-app-form-field short-field"
+          />
+        </Col>
 
-          <Col>
-            <input
-              type="text"
-              placeholder="CV"
-              className="form-control new-app-form-field short-field"
-            />
-          </Col>
-        </Row>
-      </Form>
-    </h1>
+        <Col>
+          <input
+            type="text"
+            placeholder="Years Of Post Nysc Experience"
+            className="form-control new-app-form-field short-field"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Personal Achievments"
+            className="form-control new-app-form-field long-field"
+          />
+        </Col>
+      </Row>
+    </Form>
   );
 
   const step4Content = (
-    <h1>
-      <Form className="new-app-form">
-        <Row>
-          <Col>
-            <input
-              type="text"
-              placeholder="RELEVANT SKILLS"
-              className="form-control new-app-form-field short-field"
-            />
-          </Col>
-
-          <Col>
-            <input
-              type="text"
-              placeholder="CV"
-              className="form-control new-app-form-field short-field"
-            />
-          </Col>
-        </Row>
-      </Form>
-    </h1>
+    <Form className="new-app-form">
+      <img
+        src="img/pi2.png
+          "
+        alt=""
+      />
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Role you are applying for"
+            className="form-control new-app-form-field long-field"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Why do you want to work at Sidmach? "
+            className="form-control new-app-form-field long-field"
+          />
+        </Col>
+      </Row>
+      <input
+        type="text"
+        placeholder="Why should you be selected for the role? "
+        className="form-control new-app-form-field long-field"
+      />
+      <Row></Row>
+    </Form>
   );
 
   const step5Content = (
-    <h1>
-      <Form className="new-app-form">
-        <Row>
-          <Col>
-            <input
-              type="text"
-              placeholder="RELEVANT SKILLS"
-              className="form-control new-app-form-field short-field"
-            />
-          </Col>
-
-          <Col>
-            <input
-              type="text"
-              placeholder="CV"
-              className="form-control new-app-form-field short-field"
-            />
-          </Col>
-        </Row>
-      </Form>
-    </h1>
+    <Form className="new-app-form">
+      <img
+        src="img/pi1.png
+          "
+        alt=""
+      />
+      <Row>
+        <Col>
+          <input
+            type="text"
+            placeholder="Why do you want to work at Sidmach? "
+            className="form-control new-app-form-field long-field"
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <input
+            className="form-control new-app-form-field long-field"
+            type="file"
+            name="file"
+            accept=".pdf"
+            onChange={handleChangeFile}
+            ref={input => {
+              file = input;
+            }}
+            multiple
+          />
+        </Col>
+      </Row>
+    </Form>
   );
 
   function step2Validator() {
@@ -264,11 +228,29 @@ const NewApplication = () => {
     // This function will be executed at the last step
     // when the submit button (next button in the previous steps) is pressed
   }
+
+  function handleChangeFile(event) {
+    console.log(event.target.files);
+    // let duplicateFile = {};
+    // if (file.files.length > 0) {
+    //   duplicateFile = this.state.files.find((doc) => doc.fileName === file.files[0].name);
+    //   if (isEmpty(duplicateFile)) {
+    //     const currentFiles = this.state.files;
+    //     currentFiles.push({
+    //       fileInput: file.files[0],
+    //       fileName: file.files[0].name,
+    //     });
+    //     this.setState({
+    //       files: currentFiles,
+    //     }, () => console.log(this.state.files));
+    //   }
+    // }
+  }
   return (
     <div>
       <Header />
-      <Container>
-        <Col sm={8} className="new-app-header">
+      <Container className="new-app-container">
+        <Col sm={9} className="new-app-header">
           <h1>New Application</h1>
           <p>
             Do you have what it takes to join our team of superstars? Submit
@@ -277,7 +259,6 @@ const NewApplication = () => {
         </Col>
 
         <Row className="form-card">
-          <img src="img/person1.jpeg" alt="" />
           <StepProgressBar
             startingStep={0}
             onSubmit={onFormSubmit}
