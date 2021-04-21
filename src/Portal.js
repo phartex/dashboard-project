@@ -9,8 +9,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import SignUp from "./SignUp";
-import welcome from "./component/welcome.jpg";
+
+import welcome from "./welcome.jpg";
 const Portal = () => {
   return (
     <body>
@@ -21,7 +21,7 @@ const Portal = () => {
             <h1 className="text-success"> At Sidmach</h1>
           </div>
         </div>
-        <Row>
+        <Row className="">
           <Col>
             <img
               className="logo bg-img"

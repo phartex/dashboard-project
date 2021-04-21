@@ -181,7 +181,7 @@ form .form_group .middle-footer {
 .align-end {
   text-align: end;
 }
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   body {
     box-shadow: none;
   }
@@ -196,10 +196,49 @@ form .form_group .middle-footer {
   .main-row-child h1 {
     text-align: center;
   }
-}
+} */
 
 @media (max-width: 576px) {
   .main-row .main-row-child {
     height: 90px;
   }
+  .bg-img {
+    display: none;
+  }
+  .main{
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 4em 2em;
+    height: 30vh;
+  }
+  .main-row{
+    width: 100%;
+    display: block;
+    /* margin-left: -40px; */
+    
+  }
+  .sign-in-form {
+    padding: 3em;
+   text-align: center;
+   justify-content: center;
+   margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: none;
+  }
+  .sign-in-form img {
+   margin: 2rem auto;
+    width: 180px;
+  }
+  .form_submit{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+
 }
+
+
+

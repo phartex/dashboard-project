@@ -33,6 +33,7 @@ const SignUp = () => {
               </p>
               <div className="sign_portal">
                 <h2>Sign Up To Our Careers Portal</h2>
+                
 
                 <div className="row main_right">
                   <div className="col-xs-12  input_field" id="field2">

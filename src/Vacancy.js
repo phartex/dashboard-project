@@ -15,7 +15,7 @@ const Vacancy = () =>{
     return (
         <body>
 			
-		<nav className="navbar navbar-expand-md navbar-light sticky-top">
+		<nav className="navbar navbar-expand-md bg-success navbar-light sticky-top">
 			<div className="container-fluid nav-main">
 				<a href="#" className="navbar-brand"><img className='logo bg-success' src="//sidmach.com/wp-content/uploads/2020/06/Sidlogo-white-1.png" style={{width:"150px"}} alt=""/></a>
 				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -51,7 +51,7 @@ const Vacancy = () =>{
 <section className="row container-fluid section-main">
 	<div className="col-xs-12 col-md-8 col-lg-8 section-left">
 			<div className="left_upper">
-			<h2>Hello Chetachi</h2>
+			<h2 className=''>Hello Chetachi</h2>
 				<p>Welcome to your dashboard</p>
 			</div>
 			<div className = "left_middle">
@@ -75,6 +75,7 @@ const Vacancy = () =>{
 			</div>
 			<div className="left_low">
 				<h3 style={{marginTop:'30px'}}>Available positions</h3>
+				<hr/>
 				<br/>
 				<div className="grid">
 				<div className='first'>
@@ -97,7 +98,7 @@ const Vacancy = () =>{
 					<button type="button" className="last btn btn-primary last">APPLY NOW</button>
 				</div>
 				<div className='third'>
-				<h5 className="fs-1 " style={{marginTop: '10px'}}>Frontend Web Developer</h5>
+				<h5  style={{marginTop: '10px'}}>Frontend Web Developer</h5>
 					<p className="text-muted">The Web developer translates brands objectives into code and is 
 					in charge of delivering a compelling experience for all web  visitors.</p>
 					<div className="button"><button type="button" className="mid_level btn btn-primary">Mid-Level</button>
@@ -107,26 +108,25 @@ const Vacancy = () =>{
 				</div>
 				</div>
 				
-				
-				
-
-
-
-
-
-	
-
 			</div>
 						
 	</div>
 	<div className="col-xs-12 col-md-4 col-lg-4 section-right">
 		<div className = 'row personal'>
 			<img src={mockups} width='300px'/>
-			<h2>Exciting Content From Sidmach gbish</h2>
+			<h2>Exciting Content From Sidmach</h2>
 			<button type="button" style={{fontWeight:'600'}} className="last btn btn-primary last">VISIT OUR BLOG</button>
-
+		</div>
+		<div className='row youtube'>
+		<img
+              className="logo container youtube-img"
+              src="img/luminate.png"
+              alt=""
+            />
 		</div>
 	</div>
+
+
 
 	
 </section>
