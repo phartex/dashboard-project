@@ -7,7 +7,7 @@ html,body{
     padding: 0;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    
+    background-color: white;
   }
 .container .main {
     margin-top: 0;
@@ -20,16 +20,17 @@ html,body{
     font-weight: 500;
     font-size: 1.2em;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 .container .main .left p{
-    margin-top: 120px;
+    margin-top: 10px;
     
 }
 .container .main .left img{
     /* justify-content: center; */
     text-align: center;
     width: 100%;
-    margin-left:auto;
+    margin-left:30px;
     margin-top: 0px;
 }
 .container .main .left .image{
@@ -48,7 +49,9 @@ html,body{
     font-weight: 700;
 }
 .right{
+    justify-content: center;
     background-color: #fff;
+    width: 0%;
 }
 
 .container .main button{
@@ -63,6 +66,7 @@ html,body{
 }
 .container .main .right{
     padding: 0 40px;
+   
 }
 .container .main .right .info{
      margin-left: 440px;
@@ -72,23 +76,28 @@ html,body{
 .container .main .right .info .info-link{
     cursor: pointer;
 }
-.container .main .right .sign_portal{
-    margin-top: 45% ;
-    transform: translateY(-50%); 
-}
-.container .main .right .sign_portal h2{
+.container .main .right h2{
+    margin: 0 auto;
+    text-align: center;
     color: #292F53;
-    font-weight: 400;
-    font-size: 40px;
+    font-weight: 600;
+    font-size: 30px;
+    
 }
 .container .main .right .main_right{
-    margin-top: 50px;
-    
-    
+    margin-top: 50px;    
+}
+.main_right{
+    border-radius:30px;
+    border: 1px solid grey;
+    margin: 0 auto;
+    padding:1.5em;
+    width: 70%;
+    justify-content: right;
 }
 .container .main .right .main_right input{
     background-color: #f0f0f0;
-    width:80%;
+    width:150%;
     outline: none;
     border: none;
     height: 55px;
@@ -123,9 +132,11 @@ html,body{
 }
 #field2{
     width: 50%;
+    margin-top: 1em;
 }
 #field3{
     width: 50%;
+    margin-top: 0;
 }
 
 
@@ -174,18 +185,3 @@ html,body{
     }
     
 }
-/*
-.container .main .right .main_right .input_field p{
-    background: coral;
-}
-.container .main .right .main_right .input_field input{
-    background: none;
-    border: none;
-    text-align: center;
-    margin-right: 50px;
-    outline: none;
-    line-height: 1;
-    font-weight: 500;
-    font-size: 1.1rem;
-    color: #333;
-} */
