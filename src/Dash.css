@@ -619,6 +619,34 @@ form .form_group .middle-footer {
     margin: 0 auto;
   }
 
+  .main-text h1 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    /*  text-align: center; */
+    margin-top: -1rem;
+    text-align: center;
+    
+    line-height: 4rem;
+  }
+  .sign-in-form{
+    height: 90%;
+    margin-top: 1rem;
+  }
+  .vacancy {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .no-account-link {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* .middle-footer button{
+    margin-top: 30px;
+  } */
+
 
 }
 

@@ -10,6 +10,7 @@ import {
   Route
 } from "react-router-dom";
 import SignUp from "./SignUp";
+import Vacancy from "../../Vacancy"
 
 const Portal = () => {
   return (

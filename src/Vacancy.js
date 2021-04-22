@@ -1,9 +1,9 @@
 import React from 'react'
 import Link, { BrowserRouter } from 'react-router-dom'
-import robot from './component/robot.jpg'
+// import robot from './component/robot.jpg'
 import './Vacancy.css'
-import profile1 from './component/profile-1.jpg'
-import profile2 from './component/profile-2.jpg'
+// import profile1 from './component/profile-1.jpg'
+// import profile2 from './component/profile-2.jpg'
 import vector1 from './component/Sidmach/Vector1.png'
 import vector from './component/Sidmach/Vector.png'
 import Ellipse from './component/Sidmach/Ellipse.png'
@@ -56,7 +56,7 @@ const Vacancy = () =>{
 			</div>
 			<div className = "left_middle">
 				<div className="row application">
-					<div className="col-lg-8">
+					<div className="col-lg-8 app ">
 						<h3 >Applications Overview</h3>
 						<div className="test">
 							<img  src ={greenrec} width='25px'/>
@@ -69,7 +69,7 @@ const Vacancy = () =>{
 						
 					</div>
 					<div className="col-lg-4">
-					<img src ={chart} style={{marginLeft:"-100px",marginTop:'2em'}} width='300px'/>
+					<img className="graph" src ={chart} style={{marginLeft:"-100px",marginTop:'2em'}} width='300px'/>
 					</div>
 				</div>
 			</div>

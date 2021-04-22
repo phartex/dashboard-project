@@ -16,7 +16,6 @@ body{
     display: flex;
 }
 .apply img{
-    background-color: red;
     width: 2%;
     float: left;
 }
@@ -39,7 +38,6 @@ nav{
     margin-top: 0;
 }
 .logo{
-    /* background-color: red; */
     border-radius: 10px;
     margin-top: 0em;
 }
@@ -172,4 +170,73 @@ margin-left: 3em;
 }
 .left_low hr{
     width: 100px;
+}
+
+
+@media (max-width: 576px){
+    
+    .left_upper{
+        text-align: center;
+    }
+    .left_upper h2{
+        font-weight: 500;
+    }
+    .left_upper p{
+        font-size: 1.2rem;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }  
+    .left_middle{
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+    .application{
+        text-align: center;
+    }
+    
+    .graph{
+        display: none;
+    }
+    .first , .second , .third{
+        width:300px;
+        text-align: center;
+        justify-content: center;
+        padding: 1em;
+        margin: 3rem auto;
+        border-radius: 20px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    }
+    .left_low{
+        margin-top: 2em;
+        padding: 1em;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .section-right{
+        text-align: center;
+        margin: 0 auto;
+        width: 350px;
+    }
+    .section-right .personal{
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .section-right .personal img{
+        width: 250px;
+        text-align: center;
+    }
+    .section-right .youtube{
+        width: 10px;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .youtube-img{
+        background-color: transparent;
+        width: 300px;
+        margin-left: 0;
+    }
 }
