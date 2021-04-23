@@ -35,10 +35,11 @@ const SignUp = () => {
         <Container className="sign-up-bg">
           <Row>
             <Col md={7}>
-              <h2 className="sign-up-header">Sign Up To Our Careers Portal</h2>
               <div className="sign-up-form">
                 <Row className="form-logo">
-                  <img src="img/sidmach-logo2.png" alt="" />
+                  <h2 className="sign-up-header">
+                    Sign Up To Our Careers Portal
+                  </h2>
                 </Row>
 
                 <Row>

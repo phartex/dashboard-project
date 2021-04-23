@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col, Media } from "react-bootstrap";
 import Header from "../../layout/Header";
-import Link, { BrowserRouter } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import "../../../Vacancy.css";
 
 const AdminDashboard = () => {
@@ -14,9 +14,17 @@ const AdminDashboard = () => {
       <Container>
         <Row>
           <Col md={8}>
-            <div className="dash-header">
-              <h1>Hello Chetachi</h1> <p>Welcome to your dashbord</p>
-            </div>
+            <Row className="dash-header">
+              <Col md={6}>
+                <h1>Hello Chetachi</h1> <p>Welcome to your dashbord</p>
+              </Col>
+              <Col md={6} className="flex-end">
+                <button>
+                  {" "}
+                  <img src="img/add-icon.png" alt="" /> &nbsp; Add Vacancy
+                </button>
+              </Col>
+            </Row>
 
             <div className="app-ov-card">
               <Container>
@@ -40,12 +48,12 @@ const AdminDashboard = () => {
                     </Media>
                   </Col>
                   <Col>
-                    <img src="img/Chart2.png" alt="" />
+                    <img src="img/Chart3.png" alt="" />
                   </Col>
                 </Row>
                 <Row>
-                  <Media className="stats-info warning-info">
-                    <img src="img/warning.png" alt="" />
+                  <Media className="stats-info warning-info progress-info">
+                    <img src="img/progress-icon .png" alt="" />
                     <Media.Body>
                       <p> 0 Applications in last 7 days</p>
                     </Media.Body>
@@ -86,13 +94,12 @@ const AdminDashboard = () => {
                           </p>
                         </Row>
 
-                        <Row>
-                          <Col>
-                            <div className="job-tag">Mid-level</div>
-                          </Col>
-                          <Col>
-                            <button className="blue-btn">APPLY NOW</button>
-                          </Col>
+                        <Row className="view-app-link">
+                          <Link to="/view-applications">
+                            <button className="blue-btn">
+                              VIEW APPLICATIONS
+                            </button>
+                          </Link>
                         </Row>
                       </div>
                     </div>
@@ -115,12 +122,9 @@ const AdminDashboard = () => {
                         </Row>
 
                         <Row>
-                          <Col>
-                            <div className="job-tag">Mid-level</div>
-                          </Col>
-                          <Col>
-                            <button className="blue-btn">APPLY NOW</button>
-                          </Col>
+                          <button className="blue-btn">
+                            VIEW APPLICATIONS
+                          </button>
                         </Row>
                       </div>
                     </div>
@@ -143,12 +147,9 @@ const AdminDashboard = () => {
                         </Row>
 
                         <Row>
-                          <Col>
-                            <div className="job-tag">Entry-level</div>
-                          </Col>
-                          <Col>
-                            <button className="blue-btn">APPLY NOW</button>
-                          </Col>
+                          <button className="blue-btn">
+                            VIEW APPLICATIONS
+                          </button>
                         </Row>
                       </div>
                     </div>

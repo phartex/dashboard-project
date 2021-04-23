@@ -5,6 +5,7 @@ import Dashboard from "./component/pages/Dashboard";
 import Portal from "./component/pages/Portal";
 import NewApplication from "./component/pages/NewApplication";
 import AdminDashboard from "./component/pages/admin/AdminDashboard";
+import ViewApplications from "./component/pages/admin/ViewApplications";
 import Header from "./component/layout/Header";
 import {
   BrowserHistory,
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/dashboard" component={Dashboard}></Route>
           <Route path="/new-application" component={NewApplication}></Route>
           <Route path="/admin-dashboard" component={AdminDashboard}></Route>
+          <Route path="/view-applications" component={ViewApplications}></Route>
         </Switch>
       </BrowserRouter>
     </>

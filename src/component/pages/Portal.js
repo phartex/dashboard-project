@@ -49,7 +49,7 @@ const Portal = () => {
                 </h1>
                 <p className="vacancy ">
                   Discover available vacancies{" "}
-                  <Link to="/Vacancy">Click Here For More</Link>
+                  <Link to="/dashboard">Click Here For More</Link>
                 </p>
               </div>
             </div>

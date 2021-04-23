@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "../../Dash.css";
+import DatePicker from "react-datepicker";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import StepProgressBar from "react-step-progress";
 import Header from "../layout/Header";
 import "react-step-progress/dist/index.css";
+import "react-datepicker/dist/react-datepicker.css";
+import swal from "sweetalert";
 let file = "";
 const NewApplication = () => {
   const [files, setFiles] = useState([]);
+  const [date, setDate] = useState(new Date());
 
   const step1Content = (
     <Form className="new-app-form">
@@ -26,17 +30,25 @@ const NewApplication = () => {
       </Row>
       <Row>
         <Col>
-          <input
-            type="text"
-            placeholder="Gender"
-            className="form-control new-app-form-field short-field"
-          />
+          <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+            <Form.Control
+              as="select"
+              size="lg"
+              custom
+              className="form-control new-app-form-field short-field"
+              placeholder="Gender"
+            >
+              <option default>Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </Form.Control>
+          </Form.Group>
         </Col>
 
         <Col>
-          <input
-            type="text"
-            placeholder="Date of Birth"
+          <DatePicker
+            selected={date}
+            onChange={date => setDate(date)}
             className="form-control new-app-form-field short-field"
           />
         </Col>
@@ -226,6 +238,11 @@ const NewApplication = () => {
   function onFormSubmit() {
     // handle the submit logic here
     // This function will be executed at the last step
+    swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success"
+    });
     // when the submit button (next button in the previous steps) is pressed
   }
 

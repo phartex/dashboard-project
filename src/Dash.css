@@ -9,8 +9,16 @@ body {
   background-color: #fafafa;
 }
 
+select.form-control:not([size]):not([multiple]) {
+  height: inherit;
+}
+
 .container {
   height: 100% !important;
+}
+
+.swal-button {
+  background-color: #076032 !important;
 }
 
 .new-app-container {
@@ -29,7 +37,7 @@ body {
   background-image: url("../src/bg-img/Vector2.png");
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 580px;
+  background-size: 480px;
 }
 
 .sign-up-bg {
@@ -100,7 +108,7 @@ body {
 .sign-up-header {
   color: #292f53;
   margin-bottom: 2rem;
-  font-size: 44px;
+  font-size: 20px;
 }
 
 .logo {
@@ -329,6 +337,11 @@ form .form_group .middle-footer {
   text-align: end;
 }
 
+.dash-header {
+  display: flex;
+  align-items: center;
+}
+
 .dash-header h1 {
   font-weight: 500;
   font-size: 2.7rem;
@@ -338,6 +351,33 @@ form .form_group .middle-footer {
   font-weight: 100;
   font-size: 1.5rem;
   color: #999999;
+}
+
+.applicant-info button,
+.dash-header button {
+  padding: 1rem;
+  box-shadow: none;
+  background-color: #fff;
+  color: rgba(41, 36, 83, 0.6);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.dash-header img {
+  width: 30px;
+}
+.applicant-info img {
+  width: 20px;
+}
+
+.flex-end {
+  text-align: right;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
 .app-ov-card {
@@ -417,6 +457,9 @@ form .form_group .middle-footer {
   font-size: 8px;
   width: 100%;
   border-radius: 6px;
+}
+.view-app-link a {
+  width: 100%;
 }
 .btn-lg {
   font-size: 15px !important;
@@ -499,10 +542,19 @@ form .form_group .middle-footer {
 
 .media-body p {
   margin-bottom: 0 !important;
+  font-size: 0.8rem;
 }
 
 .warning-info p {
   color: #c30202;
+}
+
+.progress-info {
+  width: 30% !important;
+}
+
+.progress-info p {
+  color: rgba(41, 47, 83, 0.5) !important;
 }
 
 ._53Ji7 {
@@ -551,6 +603,45 @@ form .form_group .middle-footer {
   top: -52px;
   right: 2px;
   z-index: -1;
+}
+
+.job-desc {
+  display: flex;
+  align-items: center;
+}
+
+.job-name h1 {
+  color: #292f53;
+  font-size: 50px;
+}
+
+.job-applicants img {
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.job-applicants p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+.applicant h3 {
+  color: #292f53;
+  font-size: 25px;
+}
+
+.applicant p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.applicant-info {
+  margin-bottom: 2rem;
+}
+
+.center-col {
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
