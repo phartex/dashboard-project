@@ -15,6 +15,7 @@ import {
   Route
 } from "react-router-dom";
 import SignUp from "./component/pages/SignUp";
+import Vacancy from "./Vacancy"
 // import image from './image.png'
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Portal}></Route>
           <Route path="/SignUp" component={SignUp}></Route>
+          <Route path="/Vacancy" component={Vacancy}></Route>
           <Route path="/dashboard" component={Dashboard}></Route>
           <Route path="/new-application" component={NewApplication}></Route>
           <Route path="/admin-dashboard" component={AdminDashboard}></Route>

@@ -4,7 +4,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     box-sizing: border-box;
     margin: 0;
     
@@ -16,7 +16,6 @@ body{
     display: flex;
 }
 .apply img{
-    background-color: red;
     width: 2%;
     float: left;
 }
@@ -39,7 +38,6 @@ nav{
     margin-top: 0;
 }
 .logo{
-    /* background-color: red; */
     border-radius: 10px;
     margin-top: 0em;
 }
@@ -70,14 +68,26 @@ margin-left: 3em;
     margin: 0 auto;
 
 }
+
+.youtube-img{
+    background-color: transparent;
+    width: 300px;
+    margin-left: 120px;
+}
 .left_middle{
-    margin-top: 4em;
-    padding: 1em;
+    margin-top: 2em;
+    /* padding: 1em; */
+    border-radius: 10px;
     border: 2px solid grey;
+    padding: 3em 2em;
 }
 
-.left_low{
+.left_upper h2{
+    font-weight: 600;
+}
+.left_upper p{
     
+    font-size: 25px;
 }
 .grid{
     display: grid;
@@ -87,6 +97,7 @@ margin-left: 3em;
     width:300px;
     justify-content: center;
     padding: 1em;
+    border-radius: 20px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 }
 .second , .third{
@@ -100,6 +111,7 @@ margin-left: 3em;
     border: none;
     border-radius: 10px;
    width: 100px;
+   margin-left: 5px;
 }
 .inner{
     margin-left: 30px;
@@ -109,22 +121,122 @@ margin-left: 3em;
     border: none;
     border-radius: 10px;
    width: 80px;
+   margin-left: 40px;
 }
 
 .last{
-    margin-top: 1em;
+    margin-top: 2.5em;
     text-align: center;
     justify-self: center;
     width: 200px;
+    margin-left: 30px;
     background-color:#292F53;
     border: none;
+    border-radius: 10px;
    
 }
 .personal{
     justify-content: center;
+    padding: 2em 1em;
+    width: 330px;
+    margin-left: 70px;
+    border-radius: 10px;
+    border: 1px solid #292F53;
 }
+.personal h2{
+    text-align: center;
+    color: #292F53;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.personal button{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 
 .personal img{
     margin:0 auto;
 
+}
+.left_low{
+    margin-top: 2em;
+    padding: 1em;
+    /* border: 1px solid #E5E5E5; */
+}
+.left_low h5{
+    font-weight: 600;
+}
+.left_low hr{
+    width: 100px;
+}
+
+
+@media (max-width: 576px){
+    
+    .left_upper{
+        text-align: center;
+    }
+    .left_upper h2{
+        font-weight: 500;
+    }
+    .left_upper p{
+        font-size: 1.2rem;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }  
+    .left_middle{
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+    .application{
+        text-align: center;
+    }
+    
+    .graph{
+        display: none;
+    }
+    .first , .second , .third{
+        width:300px;
+        text-align: center;
+        justify-content: center;
+        padding: 1em;
+        margin: 3rem auto;
+        border-radius: 20px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    }
+    .left_low{
+        margin-top: 2em;
+        padding: 1em;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .section-right{
+        text-align: center;
+        margin: 0 auto;
+        width: 350px;
+    }
+    .section-right .personal{
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .section-right .personal img{
+        width: 250px;
+        text-align: center;
+    }
+    .section-right .youtube{
+        width: 10px;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .youtube-img{
+        background-color: transparent;
+        width: 300px;
+        margin-left: 0;
+    }
 }

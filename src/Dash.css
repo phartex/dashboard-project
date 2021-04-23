@@ -675,4 +675,71 @@ form .form_group .middle-footer {
   .main-row .main-row-child {
     height: 90px;
   }
+  .bg-img {
+    display: none;
+  }
+  .main{
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 4em 2em;
+    height: 30vh;
+  }
+  .main-row{
+    width: 100%;
+    display: block;
+    /* margin-left: -40px; */
+    
+  }
+  .sign-in-form {
+    padding: 3em;
+   text-align: center;
+   justify-content: center;
+   margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: none;
+  }
+  .sign-in-form img {
+   margin: 2rem auto;
+    width: 180px;
+  }
+  .form_submit{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .main-text h1 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    /*  text-align: center; */
+    margin-top: -1rem;
+    text-align: center;
+    
+    line-height: 4rem;
+  }
+  .sign-in-form{
+    height: 90%;
+    margin-top: 1rem;
+  }
+  .vacancy {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .no-account-link {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* .middle-footer button{
+    margin-top: 30px;
+  } */
+
+
 }
+
+
+

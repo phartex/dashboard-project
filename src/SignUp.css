@@ -154,6 +154,7 @@ html,body{
         margin-top: 1em;
     }
     .container .main .right .sign_portal{
+
         margin-top: 18em ;
         
         /* transform: translateY(-50%); */
@@ -182,6 +183,14 @@ html,body{
         margin-left: 110px;
         margin-top: 0;
         
+    }
+    .sign-up-header{
+
+        text-align: center;
+        font-size: 2rem ;
+    }
+    .sign-up-form{
+        margin: 0 auto;
     }
     
 }
