@@ -734,10 +734,18 @@ form .form_group .middle-footer {
     margin-top: 1rem;
   }
 
-  /* .middle-footer button{
-    margin-top: 30px;
-  } */
-
+/* media query for new-application-page
+ */
+ .new-app-form img{
+   display: none;
+ }
+ .new-app-header{
+   text-align: center;
+ }
+ .new-app-header p{
+   text-align: center;
+   width: 100%;
+ }
 
 }
 

@@ -23,8 +23,8 @@ const Vacancy = () => {
                   <div className="cards-header">Available Positions</div>
                 </Row>
 
-                <Row>
-                  <Col>
+                 <Row className='whole-cards'>
+                  <Col >
                     <div className="positions-cards">
                       <img src="img/Rectangle1.png" alt="" />
                       <div className="position-cards-inner">
