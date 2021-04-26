@@ -644,6 +644,52 @@ form .form_group .middle-footer {
   text-align: center;
 }
 
+.bar-chart {
+  height: 200px !important;
+}
+
+.canvasjs-chart-credit {
+  color: #fff !important;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: -10rem;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.profile-dropdown-header {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+.dropdown-media {
+  margin-left: -1rem !important;
+}
+.dropdown-media img {
+  width: 17px !important;
+  height: 17px !important;
+}
+
+.drop-menu-item p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.user-type {
+  font-size: 14px;
+  font-weight: 200;
+}
 @media (min-width: 1200px) {
   .container {
     max-width: 95% !important;
@@ -678,7 +724,7 @@ form .form_group .middle-footer {
   .bg-img {
     display: none;
   }
-  .main{
+  .main {
     justify-content: center;
     text-align: center;
     margin: 0 auto;
@@ -686,26 +732,25 @@ form .form_group .middle-footer {
     padding: 4em 2em;
     height: 30vh;
   }
-  .main-row{
+  .main-row {
     width: 100%;
     display: block;
     /* margin-left: -40px; */
-    
   }
   .sign-in-form {
     padding: 3em;
-   text-align: center;
-   justify-content: center;
-   margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
     background-color: #fff;
     width: 100%;
     box-shadow: none;
   }
   .sign-in-form img {
-   margin: 2rem auto;
+    margin: 2rem auto;
     width: 180px;
   }
-  .form_submit{
+  .form_submit {
     text-align: center;
     margin: 0 auto;
   }
@@ -716,10 +761,10 @@ form .form_group .middle-footer {
     /*  text-align: center; */
     margin-top: -1rem;
     text-align: center;
-    
+
     line-height: 4rem;
   }
-  .sign-in-form{
+  .sign-in-form {
     height: 90%;
     margin-top: 1rem;
   }
@@ -737,9 +782,4 @@ form .form_group .middle-footer {
   /* .middle-footer button{
     margin-top: 30px;
   } */
-
-
 }
-
-
-

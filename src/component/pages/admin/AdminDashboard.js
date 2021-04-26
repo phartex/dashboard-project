@@ -3,11 +3,31 @@ import { Container, Row, Col, Media } from "react-bootstrap";
 import Header from "../../layout/Header";
 import { Link, BrowserRouter } from "react-router-dom";
 import "../../../Vacancy.css";
+import { CanvasJSChart } from "canvasjs-react-charts";
 
 const AdminDashboard = () => {
   useEffect(() => {
     document.body.style = "background: #fafafa;";
   }, []);
+
+  const options = {
+    height: 150,
+    dataPointWidth: 120,
+    data: [
+      {
+        // Change type to "doughnut", "line", "splineArea", etc.
+        type: "column",
+        dataPoints: [
+          {
+            label: "Web developer",
+            y: 600,
+            color: "#076032"
+          },
+          { label: "HR assistant", y: 350, color: "#292f53" }
+        ]
+      }
+    ]
+  };
   return (
     <div>
       <Header />
@@ -48,7 +68,11 @@ const AdminDashboard = () => {
                     </Media>
                   </Col>
                   <Col>
-                    <img src="img/Chart3.png" alt="" />
+                    <CanvasJSChart
+                      className="bar-chart"
+                      options={options}
+                      /* onRef={ref => this.chart = ref} */
+                    />
                   </Col>
                 </Row>
                 <Row>

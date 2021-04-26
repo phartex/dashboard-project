@@ -8,6 +8,7 @@ const Vacancy = () => {
   useEffect(() => {
     document.body.style = "background: #fafafa;";
   }, []);
+
   return (
     <div>
       <Header />
