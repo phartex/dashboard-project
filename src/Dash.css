@@ -779,11 +779,6 @@ form .form_group .middle-footer {
     margin-top: 1rem;
   }
 
-<<<<<<< HEAD
-  /* .middle-footer button{
-    margin-top: 30px;
-  } */
-=======
 /* media query for new-application-page
  */
  .new-app-form img{
@@ -796,6 +791,33 @@ form .form_group .middle-footer {
    text-align: center;
    width: 100%;
  }
+ .new-app-form{
+   display: grid;
+   grid-template-columns: 1fr;
+   margin-top: 1rem;
+ }
+.new-app-form .row{
+  display: block;
+  width: 100%;
+}
 
->>>>>>> 84d8d32e3e7db45dc930c1fd4018d8df2d3f56ee
+ /* .gender{
+  display: grid !important;
+  grid-template-columns: 1fr im !important;
+ } */
+ /* .gender .short-field{
+   width: 100%;
+ } */
+ .StepProgressBar{
+  
+   display: block;
+ }
+._2kL0S{
+  
+}
+
+._1ixJ3{
+  display: none !important;
+}
+
 }

@@ -28,13 +28,14 @@ const NewApplication = () => {
           />
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+      <Row className='gender'>
+        <Col >
+          <Form.Group   controlId="exampleForm.SelectCustomSizeSm">
             <Form.Control
               as="select"
               size="lg"
               custom
+              
               className="form-control new-app-form-field short-field"
               placeholder="Gender"
             >
@@ -47,6 +48,7 @@ const NewApplication = () => {
 
         <Col>
           <DatePicker
+          
             selected={date}
             onChange={date => setDate(date)}
             className="form-control new-app-form-field short-field"
@@ -240,7 +242,7 @@ const NewApplication = () => {
     // This function will be executed at the last step
     swal({
       title: "Good job!",
-      text: "You clicked the button!",
+      text: "Application was Successfull",
       icon: "success"
     });
     // when the submit button (next button in the previous steps) is pressed
@@ -266,7 +268,7 @@ const NewApplication = () => {
   return (
     <div>
       <Header />
-      <Container className="new-app-container">
+      <Container className="new-app-container ">
         <Col sm={9} className="new-app-header">
           <h1>New Application</h1>
           <p>
@@ -275,8 +277,9 @@ const NewApplication = () => {
           </p>
         </Col>
 
-        <Row className="form-card">
+        <Row className="form-card whole-form">
           <StepProgressBar
+          className='test'
             startingStep={0}
             onSubmit={onFormSubmit}
             steps={[
