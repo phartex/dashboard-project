@@ -35,7 +35,7 @@ const ViewApplications = () => {
             <Media>
               <img src="img/delete-icon.png" alt="" />
               <Media.Body>
-                <p> 50 applications</p>
+                <p> Delete Positions</p>
               </Media.Body>
             </Media>
           </Col>
@@ -57,7 +57,7 @@ const ViewApplications = () => {
           <Col className="center-col">
             <button>
               {" "}
-              <img src="img/application-icon.png" alt="" /> &nbsp; View CV
+              <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
           </Col>
         </Row>
@@ -78,7 +78,7 @@ const ViewApplications = () => {
           <Col className="center-col">
             <button>
               {" "}
-              <img src="img/application-icon.png" alt="" /> &nbsp; View CV
+              <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
           </Col>
         </Row>
@@ -99,7 +99,7 @@ const ViewApplications = () => {
           <Col className="center-col">
             <button>
               {" "}
-              <img src="img/application-icon.png" alt="" /> &nbsp; View CV
+              <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
           </Col>
         </Row>
@@ -120,7 +120,7 @@ const ViewApplications = () => {
           <Col className="center-col">
             <button>
               {" "}
-              <img src="img/application-icon.png" alt="" /> &nbsp; View CV
+              <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
           </Col>
         </Row>

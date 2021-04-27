@@ -12,7 +12,7 @@ const AdminDashboard = () => {
 
   const options = {
     height: 150,
-    dataPointWidth: 120,
+    dataPointWidth: 50,
     data: [
       {
         // Change type to "doughnut", "line", "splineArea", etc.
