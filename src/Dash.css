@@ -13,8 +13,19 @@ select.form-control:not([size]):not([multiple]) {
   height: inherit;
 }
 
+.purple-bg {
+  background-color: #4f567c !important;
+}
+
+.green-bg {
+  background-color: #548a6e !important;
+}
+
 .container {
   height: 100% !important;
+}
+.page-container {
+  height: 100vh !important;
 }
 
 .swal-button {
@@ -689,6 +700,60 @@ form .form_group .middle-footer {
 .user-type {
   font-size: 14px;
   font-weight: 200;
+}
+
+.action-btn {
+  float: left !important;
+  margin-bottom: 2rem !important;
+}
+
+.action-btn button {
+  padding: 0.7em;
+  border: none;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  width: max-content !important;
+}
+.danger-btn {
+  background-color: #c30202;
+}
+.approve-btn {
+  background-color: #076032;
+}
+
+.details-card {
+  padding-bottom: 4rem !important;
+}
+
+/* .cards-section {
+  margin-top: 8em;
+} */
+
+.dash-cards {
+  padding: 2em;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1.5em;
+  border-radius: 15px;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.dash-cards:hover {
+  transform: translateX(1rem);
+}
+
+.counter {
+  background-color: #c30202;
+  padding: 0.8em;
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  color: #fff;
+  border-radius: 50%;
+  width: 8.5%;
+  font-size: 12px;
 }
 @media (min-width: 1200px) {
   .container {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../../layout/Header";
 import { Container, Row, Col, Media } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ViewApplications = () => {
   useEffect(() => {
@@ -54,11 +55,19 @@ const ViewApplications = () => {
             </p>
           </Col>
 
-          <Col className="center-col">
+          <Col md={2} className="center-col">
             <button>
               {" "}
               <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
+          </Col>
+          <Col md={2} className="center-col">
+            <Link to="/view-details">
+              <button>
+                {" "}
+                <i className="far fa-file-alt"></i> &nbsp; View more
+              </button>
+            </Link>
           </Col>
         </Row>
       </Container>
@@ -75,11 +84,19 @@ const ViewApplications = () => {
             </p>
           </Col>
 
-          <Col className="center-col">
+          <Col md={2} className="center-col">
             <button>
               {" "}
               <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
+          </Col>
+          <Col md={2} className="center-col">
+            <Link to="/view-details">
+              <button>
+                {" "}
+                <i className="far fa-file-alt"></i> &nbsp; View more
+              </button>
+            </Link>
           </Col>
         </Row>
       </Container>
@@ -96,11 +113,19 @@ const ViewApplications = () => {
             </p>
           </Col>
 
-          <Col className="center-col">
+          <Col md={2} className="center-col">
             <button>
               {" "}
               <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
+          </Col>
+          <Col md={2} className="center-col">
+            <Link to="/view-details">
+              <button>
+                {" "}
+                <i className="far fa-file-alt"></i> &nbsp; View more
+              </button>
+            </Link>
           </Col>
         </Row>
       </Container>
@@ -117,11 +142,19 @@ const ViewApplications = () => {
             </p>
           </Col>
 
-          <Col className="center-col">
+          <Col md={2} className="center-col">
             <button>
               {" "}
               <i className="far fa-file-alt"></i> &nbsp; View CV
             </button>
+          </Col>
+          <Col md={2} className="center-col">
+            <Link to="/view-details">
+              <button>
+                {" "}
+                <i className="far fa-file-alt"></i> &nbsp; View more
+              </button>
+            </Link>
           </Col>
         </Row>
       </Container>

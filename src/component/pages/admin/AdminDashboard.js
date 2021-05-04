@@ -1,51 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Media } from "react-bootstrap";
 import Header from "../../layout/Header";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../../Vacancy.css";
-import { CanvasJSChart } from "canvasjs-react-charts";
+import { Bar } from "react-chartjs-2";
+import ParticleBg from "./ParticleBg";
 
 const AdminDashboard = () => {
+  const [chardtData, setChartData] = useState({
+    labels: ["HR Assistant", "Web Developer"],
+    datasets: [
+      {
+        label: "Job Applications",
+        data: [600, 350],
+        backgroundColor: ["#076032", "#292f53"]
+      }
+    ]
+  });
+
   useEffect(() => {
     document.body.style = "background: #fafafa;";
   }, []);
 
-  const options = {
-    height: 150,
-    dataPointWidth: 50,
-    data: [
-      {
-        // Change type to "doughnut", "line", "splineArea", etc.
-        type: "column",
-        dataPoints: [
-          {
-            label: "Web developer",
-            y: 600,
-            color: "#076032"
-          },
-          { label: "HR assistant", y: 350, color: "#292f53" }
-        ]
-      }
-    ]
-  };
   return (
     <div>
       <Header />
       <Container>
+        <Row className="dash-header">
+          <Col md={6}>
+            <h1>Hello HR</h1> <p>Welcome to your dashbord</p>
+          </Col>
+          <Col md={6} className="flex-end">
+            <button>
+              {" "}
+              <img src="img/add-icon.png" alt="" /> &nbsp; Add Vacancy
+            </button>
+          </Col>
+        </Row>
         <Row>
           <Col md={8}>
-            <Row className="dash-header">
-              <Col md={6}>
-                <h1>Hello Chetachi</h1> <p>Welcome to your dashbord</p>
-              </Col>
-              <Col md={6} className="flex-end">
-                <button>
-                  {" "}
-                  <img src="img/add-icon.png" alt="" /> &nbsp; Add Vacancy
-                </button>
-              </Col>
-            </Row>
-
             <div className="app-ov-card">
               <Container>
                 <Row>
@@ -68,10 +61,18 @@ const AdminDashboard = () => {
                     </Media>
                   </Col>
                   <Col>
-                    <CanvasJSChart
-                      className="bar-chart"
-                      options={options}
-                      /* onRef={ref => this.chart = ref} */
+                    <Bar
+                      data={chardtData}
+                      width={100}
+                      height={50}
+                      options={{
+                        title: {
+                          display: true,
+                          text: "largest apps",
+                          fontSize: 25
+                        },
+                        legend: { display: true, position: "right" }
+                      }}
                     />
                   </Col>
                 </Row>
@@ -86,9 +87,60 @@ const AdminDashboard = () => {
               </Container>
             </div>
           </Col>
-          <Col>
-            <div className="luminate-vid">
-              <img src="img/luminate-vid.png" alt="" />
+          <Col className="cards-section ">
+            <div
+              style={{
+                position: "absolute",
+                background: "transparent",
+                top: "75px",
+                left: 0,
+                width: "100%",
+                height: "150%",
+                zIndex: 700
+              }}
+            >
+              <ParticleBg />
+            </div>
+
+            <div className="dash-cards purple-bg">
+              <div className="counter">3</div>
+              <h5>New Applications</h5>
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                background: "transparent",
+                top: "0px",
+                left: 0,
+                width: "100%",
+                height: "150%",
+                zIndex: 700
+              }}
+            >
+              <ParticleBg />
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                background: "transparent",
+                top: "150px",
+                left: 0,
+                width: "100%",
+                height: "150%",
+                zIndex: 700
+              }}
+            >
+              <ParticleBg />
+            </div>
+
+            <div className="dash-cards green-bg">
+              <div className="counter">3</div>
+              <h5>New Applications</h5>
+            </div>
+
+            <div className="dash-cards">
+              <div className="counter">3</div>
+              <h5>New Applications</h5>
             </div>
           </Col>
         </Row>
@@ -180,6 +232,11 @@ const AdminDashboard = () => {
                   </Col>
                 </Row>
               </Container>
+            </div>
+          </Col>
+          <Col>
+            <div className="luminate-vid">
+              <img src="img/luminate-vid.png" alt="" />
             </div>
           </Col>
         </Row>
