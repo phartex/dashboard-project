@@ -21,6 +21,25 @@ select.form-control:not([size]):not([multiple]) {
   background-color: #548a6e !important;
 }
 
+.form-btn {
+  background-color: #076032;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.form-card-header {
+  font-weight: 800;
+  text-align: center;
+  padding: 1em;
+}
+
+.form-card-header h3 {
+  font-weight: 800;
+  color: #076032;
+}
+
 .container {
   height: 100% !important;
 }
@@ -340,8 +359,19 @@ form .form_group .middle-footer {
 .long-field {
   width: 88% !important;
 }
+.mid-field {
+  width: 60% !important;
+}
 .short-field {
   width: 75% !important;
+}
+.form-group {
+  width: 100%;
+}
+
+.input-container {
+  justify-content: center !important;
+  display: flex;
 }
 
 .align-end {
@@ -482,6 +512,7 @@ form .form_group .middle-footer {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  height: ;
 }
 
 .position-cards-inner {
@@ -508,7 +539,7 @@ form .form_group .middle-footer {
   color: #686666;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 80%;
+  width: 90%;
 }
 
 .job-tag {
@@ -754,6 +785,15 @@ form .form_group .middle-footer {
   border-radius: 50%;
   width: 8.5%;
   font-size: 12px;
+}
+
+.np-card {
+  width: 60%;
+}
+
+.np-container {
+  display: flex;
+  justify-content: center !important;
 }
 @media (min-width: 1200px) {
   .container {

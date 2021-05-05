@@ -19,41 +19,76 @@ const ViewDetails = () => {
             </Row>
             <hr />
             <Row>
-              <Col md={4}>Name :</Col>
+              <Col md={5}>Name :</Col>
               <Col>Tioluwani Joseph</Col>
             </Row>
 
             <Row className="mt-2">
-              <Col md={4}>Email :</Col>
+              <Col md={5}>Email :</Col>
               <Col>Tioluwanijoseph@gmail.com</Col>
             </Row>
             <Row className="mt-2">
-              <Col md={4}>Skills :</Col>
+              <Col md={5}>Skills :</Col>
               <Col>HTML , Css, React, Javascript</Col>
             </Row>
             <Row className="mt-2">
-              <Col md={4}>Years of Experience :</Col>
+              <Col md={5}>Address :</Col>
+              <Col>No 11, magodo phase1</Col>
+            </Row>
+            <Row className="mt-2">
+              <Col md={5}>Teritary institution :</Col>
+              <Col>Babcock university</Col>
+            </Row>
+            <Row className="mt-2">
+              <Col md={5}>Class of degree :</Col>
+              <Col>First class</Col>
+            </Row>
+            <Row className="mt-2">
+              <Col md={5}>Years of Experience :</Col>
               <Col>5</Col>
             </Row>
             <Row className="mt-2">
-              <Col md={4}>Job type :</Col>
+              <Col md={5}>Job type :</Col>
               <Col>Front-end developer</Col>
             </Row>
             <Row className="mt-2">
-              <Col md={4}>Certifications :</Col>
+              <Col md={5}>Certifications :</Col>
               <Col>MSC, BSC, OND, Microsoft certified</Col>
             </Row>
 
             <Row className="mt-2">
-              <Col md={4}>Gender :</Col>
-              <Col>MAlE</Col>
+              <Col md={5}>Gender :</Col>
+              <Col>MALE</Col>
             </Row>
 
             <Row className="mt-2">
-              <Col md={4}>Date of birth :</Col>
+              <Col md={5}>Date of birth :</Col>
               <Col>20/01/1878</Col>
             </Row>
+            <Row className="mt-2">
+              <Col md={5}>Current Employer :</Col>
+              <Col>Sidmach</Col>
+            </Row>
+            <Row className="mt-2">
+              <Col md={5}>Current Role :</Col>
+              <Col>Junior developer</Col>
+            </Row>
+            <Row className="mt-2">
+              <Col md={5}>Personal achievments :</Col>
+              <Col>built 4 projects used by billions</Col>
+            </Row>
 
+            <Row className="mt-2">
+              <Col md={5}>Reason to work with sidmach :</Col>
+              <Col>Lorem ipsum</Col>
+            </Row>
+
+            <Row className="mt-2">
+              <Col md={5}>
+                Reason applicant should be selected for the role :
+              </Col>
+              <Col>Lorem ipsum ipswich</Col>
+            </Row>
             <Row className="mt-5">
               <h2>Actions</h2>
             </Row>

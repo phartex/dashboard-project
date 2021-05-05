@@ -31,10 +31,12 @@ const AdminDashboard = () => {
             <h1>Hello HR</h1> <p>Welcome to your dashbord</p>
           </Col>
           <Col md={6} className="flex-end">
-            <button>
-              {" "}
-              <img src="img/add-icon.png" alt="" /> &nbsp; Add Vacancy
-            </button>
+            <Link to="/new-position">
+              <button>
+                {" "}
+                <img src="img/add-icon.png" alt="" /> &nbsp; Add Vacancy
+              </button>
+            </Link>
           </Col>
         </Row>
         <Row>
@@ -88,59 +90,21 @@ const AdminDashboard = () => {
             </div>
           </Col>
           <Col className="cards-section ">
-            <div
-              style={{
-                position: "absolute",
-                background: "transparent",
-                top: "75px",
-                left: 0,
-                width: "100%",
-                height: "150%",
-                zIndex: 700
-              }}
-            >
-              <ParticleBg />
-            </div>
+            <Link to="/job-positions">
+              <div className="dash-cards purple-bg">
+                <div className="counter">3</div>
+                <h5>New Applications</h5>
+              </div>
+            </Link>
 
-            <div className="dash-cards purple-bg">
+            {/* <div className="dash-cards green-bg">
               <div className="counter">3</div>
-              <h5>New Applications</h5>
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                background: "transparent",
-                top: "0px",
-                left: 0,
-                width: "100%",
-                height: "150%",
-                zIndex: 700
-              }}
-            >
-              <ParticleBg />
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                background: "transparent",
-                top: "150px",
-                left: 0,
-                width: "100%",
-                height: "150%",
-                zIndex: 700
-              }}
-            >
-              <ParticleBg />
-            </div>
-
-            <div className="dash-cards green-bg">
-              <div className="counter">3</div>
-              <h5>New Applications</h5>
-            </div>
+              <h5>Job Openings</h5>
+            </div> */}
 
             <div className="dash-cards">
               <div className="counter">3</div>
-              <h5>New Applications</h5>
+              <h5>Pending Applications</h5>
             </div>
           </Col>
         </Row>

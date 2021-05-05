@@ -7,6 +7,8 @@ import NewApplication from "./component/pages/NewApplication";
 import AdminDashboard from "./component/pages/admin/AdminDashboard";
 import ViewApplications from "./component/pages/admin/ViewApplications";
 import ViewDetails from "./component/pages/admin/ViewDetails";
+import NewPosition from "./component/pages/admin/NewPosition";
+import JobPositions from "./component/pages/admin/JobPositions";
 import Header from "./component/layout/Header";
 import {
   BrowserHistory,
@@ -33,6 +35,8 @@ const App = () => {
           <Route path="/admin-dashboard" component={AdminDashboard}></Route>
           <Route path="/view-applications" component={ViewApplications}></Route>
           <Route path="/view-details" component={ViewDetails}></Route>
+          <Route path="/new-position" component={NewPosition}></Route>
+          <Route path="/job-positions" component={JobPositions}></Route>
         </Switch>
       </BrowserRouter>
     </>
