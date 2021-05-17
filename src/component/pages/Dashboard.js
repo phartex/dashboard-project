@@ -1,13 +1,22 @@
 import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import { Container, Row, Col, Media } from "react-bootstrap";
 import Header from "../layout/Header";
 import Link, { BrowserRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 import "../../Vacancy.css";
+import { LogarithmicScale } from "chart.js";
+import { getJobs } from "../../actions/jobActions";
 
-const Vacancy = () => {
+const Vacancy = ({ job: { jobs, loading, getJobs } }) => {
   useEffect(() => {
+    getJobs();
     document.body.style = "background: #fafafa;";
   }, []);
+
+  if (loading || jobs === null) {
+    return <h1>loading...</h1>;
+  }
 
   return (
     <div>
@@ -24,8 +33,8 @@ const Vacancy = () => {
                   <div className="cards-header">Available Positions</div>
                 </Row>
 
-                 <Row className='whole-cards'>
-                  <Col >
+                <Row className="whole-cards">
+                  <Col>
                     <div className="positions-cards">
                       <img src="img/Rectangle1.png" alt="" />
                       <div className="position-cards-inner">
@@ -256,4 +265,12 @@ const Vacancy = () => {
   );
 };
 
-export default Vacancy;
+Vacancy.propTypes = {
+  job: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  job: state.job
+});
+
+export default connect(mapStateToProps, { getJobs })(Vacancy);
