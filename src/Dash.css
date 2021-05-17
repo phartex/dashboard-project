@@ -512,7 +512,7 @@ form .form_group .middle-footer {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  height: ;
+  /* height: ; */
 }
 
 .position-cards-inner {
@@ -895,5 +895,31 @@ form .form_group .middle-footer {
   .new-app-header p {
     text-align: center;
     width: 100%;
+  }
+  .new-app-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+  .new-app-form .row {
+    display: block;
+    width: 100%;
+  }
+
+  /* .gender{
+  display: grid !important;
+  grid-template-columns: 1fr im !important;
+ } */
+  /* .gender .short-field{
+   width: 100%;
+ } */
+  .StepProgressBar {
+    display: block;
+  }
+  /* ._2kL0S {
+  } */
+
+  ._1ixJ3 {
+    display: none !important;
   }
 }
