@@ -2,11 +2,29 @@ import React, { useEffect } from "react";
 import Header from "../../layout/Header";
 import { Container, Row, Col, Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { deleteVacancy, getVacancies } from "../../../actions/jobActions";
+import PropTypes from "prop-types";
 
-const JobPositions = () => {
+const JobPositions = ({
+  vacancy: { vacancies, loading },
+  getVacancies,
+  deleteVacancy
+}) => {
   useEffect(() => {
+    getVacancies();
     document.body.style = "background: #fafafa;";
+    //eslint-disable-next-line
   }, []);
+
+  const onDelete = vacancy => {
+    deleteVacancy(vacancy.id);
+    console.log(vacancy.id);
+    alert("successfully deleted");
+  };
+  if (loading || vacancies === null) {
+    return <h1>loading...</h1>;
+  }
   return (
     <div>
       <Header />
@@ -29,114 +47,69 @@ const JobPositions = () => {
             <p>Current available job openings</p>
           </Col>
           <Col className="job-applicants flex-center">
-              <Link to='new-position'>
-            <Media>
-              <i
-                className="far fa-plus-square fa-2x"
-                style={{ color: "rgba(0, 0, 0, 0.5)" }}
-              ></i>
-              <Media.Body>
-                <p> &nbsp; &nbsp; Create Position</p>
-              </Media.Body>
-            </Media>
+            <Link to="new-position">
+              <Media>
+                <i
+                  className="far fa-plus-square fa-2x"
+                  style={{ color: "rgba(0, 0, 0, 0.5)" }}
+                ></i>
+                <Media.Body>
+                  <p> &nbsp; &nbsp; Create Position</p>
+                </Media.Body>
+              </Media>
             </Link>
           </Col>
         </Row>
       </Container>
 
       <hr />
+      <div>
+        {!loading && vacancies.length === 0 ? (
+          <p>no vacancies available</p>
+        ) : (
+          vacancies.vacancies.map(vacancy => (
+            <Container key={vacancy.id}>
+              <Row className="applicant-info mt-5">
+                <Col className="applicant">
+                  <h3>{vacancy.jobTitle}</h3>
+                  <p>{vacancy.description[0].jobDescriptions}</p>
+                </Col>
 
-      <Container>
-        <Row className="applicant-info mt-5">
-          <Col className="applicant">
-            <h3>Front End Developer</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus{" "}
-            </p>
-          </Col>
-
-          <Col md={4} className="center-col">
-            <Link to="/view-applications">
-              <button>
-                {" "}
-                <i className="far fa-file-alt"></i> &nbsp; View applicants
-              </button>
-            </Link>
-          </Col>
-        </Row>
-      </Container>
-
-      <hr />
-
-      <Container>
-        <Row className="applicant-info mt-5">
-          <Col className="applicant">
-            <h3>HR assistant</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus{" "}
-            </p>
-          </Col>
-
-          <Col md={4} className="center-col">
-            <Link to="/view-applications">
-              <button>
-                {" "}
-                <i className="far fa-file-alt"></i> &nbsp; View applicants
-              </button>
-            </Link>
-          </Col>
-        </Row>
-      </Container>
-
-      <hr />
-
-      <Container>
-        <Row className="applicant-info mt-5">
-          <Col className="applicant">
-            <h3>Backend developer </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus{" "}
-            </p>
-          </Col>
-
-          <Col md={4} className="center-col">
-            <Link to="/view-applications">
-              <button>
-                {" "}
-                <i className="far fa-file-alt"></i> &nbsp; View applicants
-              </button>
-            </Link>
-          </Col>
-        </Row>
-      </Container>
-
-      <hr />
-
-      <Container>
-        <Row className="applicant-info mt-5">
-          <Col className="applicant">
-            <h3>Product manager</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus{" "}
-            </p>
-          </Col>
-
-          <Col md={4} className="center-col">
-            <Link to="/view-applications">
-              <button>
-                {" "}
-                <i className="far fa-file-alt"></i> &nbsp; View applicants
-              </button>
-            </Link>
-          </Col>
-        </Row>
-      </Container>
+                {/* <Col md={4} className="center-col">
+                  <Link to="/view-applications">
+                    <button>
+                      {" "}
+                      <i className="far fa-file-alt"></i> &nbsp; View applicants
+                    </button>
+                  </Link>
+                </Col> */}
+                <Col md={1}>
+                  <a href="#" onClick={() => onDelete(vacancy)}>
+                    <i
+                      className="far fa-trash-alt fa-2x mt-2"
+                      style={{ color: "grey" }}
+                    />
+                  </a>
+                </Col>
+              </Row>
+              <hr />
+            </Container>
+          ))
+        )}
+      </div>
     </div>
   );
 };
 
-export default JobPositions;
+JobPositions.propTypes = {
+  vacancy: PropTypes.object.isRequired,
+  deleteVacancies: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => ({
+  vacancy: state.vacancy
+});
+
+export default connect(mapStateToProps, { getVacancies, deleteVacancy })(
+  JobPositions
+);

@@ -4,9 +4,17 @@ import Header from "../../layout/Header";
 import { Link } from "react-router-dom";
 import "../../../Vacancy.css";
 import { Bar } from "react-chartjs-2";
-import ParticleBg from "./ParticleBg";
+import { getVacancies } from "../../../actions/jobActions";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ vacancy: { vacancies, loading }, getVacancies }) => {
+  useEffect(() => {
+    getVacancies();
+    document.body.style = "background: #fafafa;";
+    //eslint-disable-next-line
+  }, []);
+
   const [chardtData, setChartData] = useState({
     labels: ["HR Assistant", "Web Developer"],
     datasets: [
@@ -18,10 +26,9 @@ const AdminDashboard = () => {
     ]
   });
 
-  useEffect(() => {
-    document.body.style = "background: #fafafa;";
-  }, []);
-
+  if (loading || vacancies === null) {
+    return <h1>loading...</h1>;
+  }
   return (
     <div>
       <Header />
@@ -93,7 +100,7 @@ const AdminDashboard = () => {
             <Link to="/job-positions">
               <div className="dash-cards purple-bg">
                 <div className="counter">3</div>
-                <h5>New Applications</h5>
+                <h5>Vacancies</h5>
               </div>
             </Link>
 
@@ -118,82 +125,34 @@ const AdminDashboard = () => {
                 </Row>
 
                 <Row>
-                  <Col>
-                    <div className="positions-cards">
-                      <img src="img/Rectangle1.png" alt="" />
-                      <div className="position-cards-inner">
-                        <Row>
-                          <h3>UI/UX Designer</h3>
-                        </Row>
+                  {!loading && vacancies.length === 0 ? (
+                    <p>no vacancies available</p>
+                  ) : (
+                    vacancies.vacancies.map(vacancy => (
+                      <Col key={vacancy.id} sm={4}>
+                        <div className="positions-cards">
+                          <img src="img/Rectangle1.png" alt="" />
+                          <div className="position-cards-inner">
+                            <Row>
+                              <h3>{vacancy.jobTitle}</h3>
+                            </Row>
 
-                        <Row>
-                          <p>
-                            The UI/UX designer delivers the best product
-                            experience for our users across all interfaces
-                            ensuring customer satisfaction and loyalty
-                          </p>
-                        </Row>
+                            <Row>
+                              <p>{vacancy.description[0].jobDescriptions}</p>
+                            </Row>
 
-                        <Row className="view-app-link">
-                          <Link to="/view-applications">
-                            <button className="blue-btn">
-                              VIEW APPLICATIONS
-                            </button>
-                          </Link>
-                        </Row>
-                      </div>
-                    </div>
-                  </Col>
-
-                  <Col>
-                    <div className="positions-cards">
-                      <img src="img/Rectangle2.png" alt="" />
-                      <div className="position-cards-inner">
-                        <Row>
-                          <h3>Web Developer</h3>
-                        </Row>
-
-                        <Row>
-                          <p>
-                            The web developer translates brands objectives into
-                            code and is in charge of delivering a compelling
-                            experience for all web visitors
-                          </p>
-                        </Row>
-
-                        <Row>
-                          <button className="blue-btn">
-                            VIEW APPLICATIONS
-                          </button>
-                        </Row>
-                      </div>
-                    </div>
-                  </Col>
-
-                  <Col>
-                    <div className="positions-cards">
-                      <img src="img/Rectangle3.png" alt="" />
-                      <div className="position-cards-inner">
-                        <Row>
-                          <h3>HR Assistant</h3>
-                        </Row>
-
-                        <Row>
-                          <p>
-                            The HR assistant supports the Human resources team
-                            in people management, talent sourcing and relevant
-                            staff onboarding processes
-                          </p>
-                        </Row>
-
-                        <Row>
-                          <button className="blue-btn">
-                            VIEW APPLICATIONS
-                          </button>
-                        </Row>
-                      </div>
-                    </div>
-                  </Col>
+                            <Row className="view-app-link">
+                              <Link to="/view-applications">
+                                <button className="blue-btn">
+                                  VIEW APPLICATIONS
+                                </button>
+                              </Link>
+                            </Row>
+                          </div>
+                        </div>
+                      </Col>
+                    ))
+                  )}
                 </Row>
               </Container>
             </div>
@@ -209,4 +168,13 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+AdminDashboard.propTypes = {
+  vacancy: PropTypes.object.isRequired,
+  getVacancies: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => ({
+  vacancy: state.vacancy
+});
+
+export default connect(mapStateToProps, { getVacancies })(AdminDashboard);

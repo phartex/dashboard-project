@@ -1,36 +1,51 @@
-import React from "react";
-import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
-import { link } from "react-router";
+import React, { useState, useEffect } from "react";
+import { Row, Col } from "react-bootstrap";
+import { login } from "../../actions/authentication";
+import { connect } from "react-redux";
 import "../../Dash.css";
-import {
-  BrowserHistory,
-  BrowserRouter,
-  Link,
-  Switch,
-  Route
-} from "react-router-dom";
-import SignUp from "./SignUp";
-import Vacancy from "../../Vacancy"
+import { Link, Redirect, useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Portal = () => {
+const Portal = ({ auth: { users, isAuthenticated }, login, props }) => {
+  const history = useHistory();
+  useEffect(
+    props => {
+      if (isAuthenticated) {
+        history.push("/dashboard");
+      }
+      //eslint-diable-next-line
+    },
+    [isAuthenticated, history]
+  );
+  const [user, setUser] = useState({
+    email: "",
+    password: ""
+  });
+
+  const { email, password } = user;
+
+  const onSumbit = e => {
+    e.preventDefault();
+    let data = {
+      email,
+      password
+    };
+
+    console.log("login submit");
+
+    if (email === "" || password === "") {
+      alert("Please fill in all fields");
+    } else {
+      login({
+        email,
+        password
+      });
+    }
+  };
+
+  const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
   return (
     <body className="landing-body">
-      {/* <Navbar className="nav-bar" color="light" expand="md">
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav className="nav-items">
-            {" "}
-            <p className="info">
-              Return to{" "}
-              <span className="info-link text-info">
-                {" "}
-                <Link to="/">main</Link>
-              </span>{" "}
-              website
-            </p>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar> */}
       <div className="container main">
         <Row>
           <Col className="img-section">
@@ -57,7 +72,7 @@ const Portal = () => {
           </Col>
 
           <Col>
-            <form className="sign-in-form">
+            <form className="sign-in-form" onSubmit={onSumbit}>
               <img src="img/sidmach-logo2.png" alt="" />
               <div className="form-header">
                 <p className="welcome">WELCOME BACK ! LOGIN HERE</p>
@@ -65,13 +80,15 @@ const Portal = () => {
 
               <div className="form_group">
                 <input
-                  type="text"
-                  id="name"
-                  name="username"
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={email}
                   placeholder="Email Address"
                   className="form_input"
                   required
-                  minlength=" 7"
+                  onChange={onChange}
+                  minlength=" 8"
                 />
                 <span id="nameverify"></span>
               </div>
@@ -79,8 +96,10 @@ const Portal = () => {
               <div className="form_group">
                 <input
                   type="password"
-                  name="confirm_password"
+                  name="password"
                   placeholder="Password"
+                  value={password}
+                  onChange={onChange}
                   required
                   minlength="8"
                   id="confirm_password"
@@ -88,7 +107,9 @@ const Portal = () => {
                 />
 
                 <div className="middle-footer row">
-                  <button className=" form_submit">LOGIN</button>
+                  <button type="submit" className=" form_submit">
+                    LOGIN
+                  </button>
                 </div>
                 <Row>
                   <p className="no-account-link">
@@ -104,4 +125,15 @@ const Portal = () => {
   );
 };
 
-export default Portal;
+Portal.propTypes = {
+  auth: PropTypes.object.isRequired,
+  login: PropTypes.func.isRequired
+};
+
+const mapStateToProps = function(state) {
+  return {
+    auth: state.auth
+  };
+};
+
+export default connect(mapStateToProps, { login })(Portal);

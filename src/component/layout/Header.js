@@ -1,10 +1,11 @@
 import React from "react";
 import { Navbar, Nav, Dropdown, Media } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
-    <a
-      href=""
+    <Link
+      to="#"
       ref={ref}
       onClick={e => {
         e.preventDefault();
@@ -12,7 +13,7 @@ const Header = () => {
       }}
     >
       <img src="img/Vector2.png" alt="" />
-    </a>
+    </Link>
   ));
   return (
     <div>

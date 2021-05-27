@@ -1,10 +1,63 @@
-import React, { useEffect } from "react";
-import { Link, BrowserRouter } from "react-router-dom";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
 import "../../SignUp.css";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { register } from "../../actions/authentication";
 
-const SignUp = () => {
+const SignUp = ({ auth: { users }, register }) => {
+  const [user, setUser] = useState({
+    username: "",
+    FirstName: "",
+    email: "",
+    LastName: "",
+    password: "",
+    password_confirmation: ""
+  });
+
+  const {
+    username,
+    FirstName,
+    LastName,
+    email,
+    password,
+    password_confirmation
+  } = user;
+
+  const onSumbit = e => {
+    e.preventDefault();
+    // let data = {
+    //   first_name,
+    //   last_name,
+    //   username,
+    //   email,
+    //   password,
+    //   password_confirmation
+    // };
+
+    // const callback = response => {
+    //   console.log(response);
+    // };
+
+    // const onError = err => {
+    //   console.log(err);
+    // };
+
+    // register(data, callback, onError);
+    register({
+      username,
+      email,
+      FirstName,
+      password,
+      LastName
+    });
+    console.log("register submit");
+  };
+
+  const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
+
   useEffect(() => {
     document.body.style = "background: white;";
   }, []);
@@ -41,40 +94,76 @@ const SignUp = () => {
                     Sign Up To Our Careers Portal
                   </h2>
                 </Row>
+                <form onSubmit={onSumbit}>
+                  <Row>
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      name="username"
+                      value={username}
+                      onChange={onChange}
+                      required
+                    />
+                  </Row>
 
-                <Row>
-                  <input type="text" placeholder="Username" />
-                </Row>
+                  <Row>
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      value={email}
+                      name="email"
+                      onChange={onChange}
+                      required
+                    />
+                  </Row>
 
-                <Row>
-                  <input type="text" placeholder="Email Address" />
-                </Row>
+                  <Row>
+                    <input
+                      type="text"
+                      placeholder="Mobile Number"
+                      value={FirstName}
+                      name="FirstName"
+                      onChange={onChange}
+                      required
+                    />
+                  </Row>
+                  <Row>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      value={password}
+                      name="password"
+                      onChange={onChange}
+                      required
+                    />
+                  </Row>
+                  <Row>
+                    <input
+                      type="text"
+                      placeholder="Confirm Password"
+                      value={LastName}
+                      name="LastName"
+                      onChange={onChange}
+                      required
+                    />
+                  </Row>
 
-                <Row>
-                  <input type="text" placeholder="Mobile Number" />
-                </Row>
-                <Row>
-                  <input type="text" placeholder="Password" />
-                </Row>
-                <Row>
-                  <input type="text" placeholder="Confirm Password" />
-                </Row>
+                  <div className="terms">
+                    <div className="overview-info form-check">
+                      <input type="checkbox" />
 
-                <div className="terms">
-                  <div className="overview-info form-check">
-                    <input type="checkbox" />
-
-                    <p>
-                      By creating an account, You agree to our Terms & Privacy
-                      policy{" "}
-                    </p>
+                      <p>
+                        By creating an account, You agree to our Terms & Privacy
+                        policy{" "}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <Row>
-                  <button className="blue-btn sign-up-btn">
-                    Create Account
-                  </button>
-                </Row>
+                  <Row>
+                    <button className="blue-btn sign-up-btn" type="submit">
+                      Create Account
+                    </button>
+                  </Row>
+                </form>
               </div>
             </Col>
           </Row>
@@ -84,19 +173,15 @@ const SignUp = () => {
   );
 };
 
-// class SignUp extends React.Component{
+SignUp.propTypes = {
+  auth: PropTypes.object.isRequired,
+  register: PropTypes.func.isRequired
+};
 
-//     render(){
-//         return(
-//             <BrowserRouter>
-//             <nav>
+const mapStateToProps = function(state) {
+  return {
+    auth: state.auth
+  };
+};
 
-//             </nav>
-//             </BrowserRouter>
-
-//         )
-//     }
-
-// }
-
-export default SignUp;
+export default connect(mapStateToProps, { register })(SignUp);

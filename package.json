@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "canvasjs-react-charts": "^1.0.5",
     "chart.js": "^3.2.0",
@@ -24,6 +25,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "sweetalert": "^2.1.2",
+    "toastr": "^2.1.4",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

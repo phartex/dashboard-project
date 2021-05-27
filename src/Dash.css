@@ -513,6 +513,7 @@ form .form_group .middle-footer {
   border-radius: 10px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   /* height: ; */
+  margin-bottom: 1rem;
 }
 
 .position-cards-inner {
@@ -544,9 +545,10 @@ form .form_group .middle-footer {
 
 .job-tag {
   font-size: 10px;
-  padding: 0.3rem;
+  padding: 0.45rem;
   background-color: #d8d4d4;
   border-radius: 5px;
+  width: max-content;
 }
 
 .luminate-vid {

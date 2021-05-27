@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../../../Vacancy.css";
 import "../../../Dash.css";
-import { Container, Row, Col, Media } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../layout/Header";
 
 const ViewDetails = () => {

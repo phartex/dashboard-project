@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
-import jobReducer from "./jobReducer";
+import vacancyReducer from "./vacancyReducer";
+import applicationReducer from "./applicationReducer";
+import authReducer from "./authReducer";
 
 // export const initialState = {
 //   isLoading: false, //for active default menu
@@ -13,5 +15,7 @@ import jobReducer from "./jobReducer";
 // };
 
 export default combineReducers({
-  job: jobReducer
+  vacancy: vacancyReducer,
+  application: applicationReducer,
+  auth: authReducer
 });

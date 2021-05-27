@@ -7,13 +7,31 @@ import Header from "../layout/Header";
 import "react-step-progress/dist/index.css";
 import "react-datepicker/dist/react-datepicker.css";
 import swal from "sweetalert";
-let file = "";
-const NewApplication = () => {
-  const [files, setFiles] = useState([]);
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { submitApplication } from "../../actions/applicationActions";
+// let file = "";
+
+const NewApplication = ({ submitApplication }) => {
+  // const [files, setFiles] = useState([]);
   const [date, setDate] = useState(new Date());
+  const [fullname, setFullname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
+  const [tetInstitution, setTetInstitution] = useState("");
+  const [classOfDegree, setClassOfDegree] = useState("");
+  const [yearofExperience, setYearOfExperience] = useState("");
+  const [currentRole, setCurrentRole] = useState("");
+  const [currentEmployer, setCurrentEmployer] = useState("");
+  const [professionalCertificate, setProfessionalCertificate] = useState("");
+  const [whyRole, setWhyRole] = useState("");
+  const [relevantSkills, setRelevantSkills] = useState("");
+  const [cv, setCv] = useState("");
+  const [jobID, setJobID] = useState("");
 
   const step1Content = (
-    <Form className="new-app-form">
+    <div className="new-app-form">
       <img
         src="img/pi1.png
           "
@@ -25,17 +43,19 @@ const NewApplication = () => {
             type="text"
             placeholder="FULL NAME"
             className="form-control new-app-form-field long-field"
+            name="fullname"
+            defaultValue={fullname}
+            onChange={e => setFullname(e.target.value)}
           />
         </Col>
       </Row>
-      <Row className='gender'>
-        <Col >
-          <Form.Group   controlId="exampleForm.SelectCustomSizeSm">
+      <Row className="gender">
+        <Col>
+          <Form.Group controlId="exampleForm.SelectCustomSizeSm">
             <Form.Control
               as="select"
               size="lg"
               custom
-              
               className="form-control new-app-form-field short-field"
               placeholder="Gender"
             >
@@ -48,10 +68,11 @@ const NewApplication = () => {
 
         <Col>
           <DatePicker
-          
             selected={date}
             onChange={date => setDate(date)}
             className="form-control new-app-form-field short-field"
+            name="date"
+            defaulValue={date}
           />
         </Col>
       </Row>
@@ -61,10 +82,13 @@ const NewApplication = () => {
             type="text"
             placeholder="Home Address"
             className="form-control new-app-form-field long-field"
+            defaultValue={relevantSkills}
+            name="relevantSkills"
+            onChange={e => setRelevantSkills(e.target.value)}
           />
         </Col>
       </Row>
-    </Form>
+    </div>
   );
   const step2Content = (
     <Form className="new-app-form">
@@ -79,6 +103,9 @@ const NewApplication = () => {
             type="text"
             placeholder="Teritary institution"
             className="form-control new-app-form-field long-field"
+            name="tetInstitution"
+            defaultValue={tetInstitution}
+            onChange={e => setTetInstitution(e.target.value)}
           />
         </Col>
       </Row>
@@ -88,6 +115,9 @@ const NewApplication = () => {
             type="text"
             placeholder="Class of Degree"
             className="form-control new-app-form-field short-field"
+            name="classOfDegree"
+            defaultValue={classOfDegree}
+            onChange={e => setClassOfDegree(e.target.value)}
           />
         </Col>
 
@@ -98,10 +128,12 @@ const NewApplication = () => {
             name="file"
             accept=".pdf"
             onChange={handleChangeFile}
-            ref={input => {
-              file = input;
-            }}
+            // ref={input => {
+            //   file = input;
+            // }}
             multiple
+            name="professionalCErtificate"
+            defaultValue={professionalCertificate}
           />
         </Col>
       </Row>
@@ -129,6 +161,9 @@ const NewApplication = () => {
             type="text"
             placeholder="Current Employer"
             className="form-control new-app-form-field long-field"
+            name="currentEmployer"
+            defaultValue={currentEmployer}
+            onChange={e => setCurrentEmployer(e.target.value)}
           />
         </Col>
       </Row>
@@ -138,6 +173,9 @@ const NewApplication = () => {
             type="text"
             placeholder="Current Role"
             className="form-control new-app-form-field short-field"
+            name="currentRole"
+            defaultValue={currentRole}
+            onChange={e => setCurrentRole(e.target.value)}
           />
         </Col>
 
@@ -146,6 +184,9 @@ const NewApplication = () => {
             type="text"
             placeholder="Years Of Post Nysc Experience"
             className="form-control new-app-form-field short-field"
+            name="yearofExperience"
+            defaultValue={yearofExperience}
+            onChange={e => setYearOfExperience(e.target.value)}
           />
         </Col>
       </Row>
@@ -190,6 +231,9 @@ const NewApplication = () => {
         type="text"
         placeholder="Why should you be selected for the role? "
         className="form-control new-app-form-field long-field"
+        name="whyRole"
+        defaultValue={whyRole}
+        onChange={e => setWhyRole(e.target.value)}
       />
       <Row></Row>
     </Form>
@@ -219,9 +263,11 @@ const NewApplication = () => {
             name="file"
             accept=".pdf"
             onChange={handleChangeFile}
-            ref={input => {
-              file = input;
-            }}
+            name="cv"
+            defaultValue={cv}
+            // ref={input => {
+            //   file = input;
+            // }}
             multiple
           />
         </Col>
@@ -229,42 +275,66 @@ const NewApplication = () => {
     </Form>
   );
 
-  function step2Validator() {
-    // return a boolean
+  // function step2Validator() {
+  //   // return a boolean
+  // }
+
+  // function step3Validator() {
+  //   // return a boolean
+  // }
+  function handleChangeFile(event) {
+    console.log(event.target.files);
+    setCv(event.target.files);
   }
 
-  function step3Validator() {
-    // return a boolean
-  }
-
-  function onFormSubmit() {
+  const onFormSubmit = e => {
     // handle the submit logic here
     // This function will be executed at the last step
+
+    const data = {
+      fullname,
+      phoneNumber,
+      email,
+      dob: date,
+      role,
+      tetInstitution,
+      classOfDegree,
+      yearofExperience,
+      currentRole,
+      currentEmployer,
+      jobID: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      professionalCertificate,
+      whyRole,
+      relevantSkills,
+      cv
+    };
+    console.log(data);
+    submitApplication(data);
     swal({
       title: "Good job!",
       text: "Application was Successfull",
       icon: "success"
     });
-    // when the submit button (next button in the previous steps) is pressed
-  }
 
-  function handleChangeFile(event) {
-    console.log(event.target.files);
-    // let duplicateFile = {};
-    // if (file.files.length > 0) {
-    //   duplicateFile = this.state.files.find((doc) => doc.fileName === file.files[0].name);
-    //   if (isEmpty(duplicateFile)) {
-    //     const currentFiles = this.state.files;
-    //     currentFiles.push({
-    //       fileInput: file.files[0],
-    //       fileName: file.files[0].name,
-    //     });
-    //     this.setState({
-    //       files: currentFiles,
-    //     }, () => console.log(this.state.files));
-    //   }
-    // }
-  }
+    //clear fields
+    setFullname("");
+    setPhoneNumber("");
+    setEmail("");
+    setDate("");
+    setRole("");
+    setTetInstitution("");
+    setClassOfDegree("");
+    setYearOfExperience("");
+    setCurrentRole("");
+    setCurrentEmployer("");
+    setJobID("");
+    setProfessionalCertificate("");
+    setWhyRole("");
+    setRelevantSkills("");
+    setCv("");
+    // when the submit button (next button in the previous steps) is pressed
+  };
+
   return (
     <div>
       <Header />
@@ -279,7 +349,7 @@ const NewApplication = () => {
 
         <Row className="form-card whole-form">
           <StepProgressBar
-          className='test'
+            className="test"
             startingStep={0}
             onSubmit={onFormSubmit}
             steps={[
@@ -322,4 +392,8 @@ const NewApplication = () => {
   );
 };
 
-export default NewApplication;
+NewApplication.propTypes = {
+  submitApplication: PropTypes.func.isRequired
+};
+
+export default connect(null, { submitApplication })(NewApplication);

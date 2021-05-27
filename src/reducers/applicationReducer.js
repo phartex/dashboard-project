@@ -1,6 +1,11 @@
-import { GET_JOBS, SET_LOADING, JOBS_ERROR } from "../actions/types";
+import {
+  SET_LOADING,
+  APPLICATIONS_ERROR,
+  SUBMIT_APPLICATION
+} from "../actions/types";
+
 const initialState = {
-  jobs: null,
+  applications: null,
   current: null,
   loading: false,
   error: null
@@ -8,10 +13,10 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_JOBS:
+    case SUBMIT_APPLICATION:
       return {
         ...state,
-        logs: action.payload,
+        applications: [...state.applications, action.payload],
         loading: false
       };
     case SET_LOADING:
@@ -19,7 +24,7 @@ export default (state = initialState, action) => {
         ...state,
         loading: true
       };
-    case JOBS_ERROR:
+    case APPLICATIONS_ERROR:
       console.error(action.payload);
       return {
         ...state,

@@ -1,3 +1,13 @@
-export const GET_JOBS = "GET_JOBS";
+export const GET_VACANCIES = "GET_VACANCIES";
+export const ADD_VACANCIES = "ADD_VACANCIES";
+export const DELETE_VACANCIES = "DELETE_VACANCIES";
 export const SET_LOADING = "SET_LOADING";
 export const JOBS_ERROR = "JOBS_ERROR";
+export const SUBMIT_APPLICATION = "SUBMIT_APPLICATION";
+export const APPLICATIONS_ERROR = "APPLICATIONS_ERROR";
+export const REGISTER = "REGISTER";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const LOGIN = "LOGIN";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const USER_LOADED = "USER_LOADED";
+export const LOGIN_FAIL = "LOGIN_FAIL";
